@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ titulo }}</h2>
+    
+    <form action="/queries/query_2" method="GET">
+        <label>Tipo de Entidade:</label>
+        <select name="tipo" onchange="this.form.submit()">
+            <option value="adjudicante" {% if tipo_entidade == 'adjudicante' %}selected{% endif %}>Adjudicante</option>
+            <option value="adjudicatario" {% if tipo_entidade == 'adjudicatario' %}selected{% endif %}>Adjudicatário</option>
+        </select>
+
+        <label for="entidade_id">Selecione a Entidade:</label>
+        <select id="entidade_id" name="entidade_id" onchange="this.form.submit()">
+            <option value="">-- Todas as Entidades --</option>
+            {% for e in entidades %}
+            <option value="{{ e.ID_ENTIDADE }}" {% if e.ID_ENTIDADE | string == selecionado_id %}selected{% endif %}>
+                {{ e.NOME }} (ID: {{ e.ID_ENTIDADE }})
+            </option>
+            {% endfor %}
+        </select>
+    </form>
+    
+    {% if selecionado_nome %}
+        <h3>Contratos encontrados para {{ selecionado_nome }} ({{ tipo_entidade | capitalize }}):</h3>
+    {% endif %}
+    
+    {% if resultados %}
+        <table>
+            <thead>
+                <tr>
+                    {% for coluna in colunas %}
+                    <th>{{ coluna }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for linha in resultados %}
+                <tr>
+                    {% for valor in linha %}
+                    <td>{{ valor }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% elif selecionado_id %}
+        <p>Não foram encontrados contratos para esta entidade.</p>
+    {% endif %}
+
+    <a href="/" class="back-link">← Voltar ao Dashboard</a>
+{% endblock %}

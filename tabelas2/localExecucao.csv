@@ -1,0 +1,611 @@
+ID,pais,distrito,concelho
+1,Portugal,Aveiro,Castelo de Paiva
+2,Portugal,Coimbra,Góis
+3,Portugal,Porto,Paços de Ferreira
+4,Portugal,Braga,Vila Nova de Famalicão
+5,Portugal,Faro,São Brás de Alportel
+6,Portugal,Porto,Felgueiras
+7,Portugal,Aveiro,"Castelo de Paiva | Portugal, Porto, Penafiel | Portugal, Viseu, Cinfães"
+8,Portugal,Aveiro,"Castelo de Paiva | Portugal, Porto, Paredes | Portugal, Porto, Penafiel"
+9,Portugal,Braga,Guimarães
+10,Portugal,Leiria,Leiria
+11,Portugal,Vila Real,Vila Real
+12,Portugal,Braga,Barcelos
+13,Portugal,Vila Real,Montalegre
+14,Portugal,Vila Real,Alijó
+15,Portugal,Viseu,Viseu
+16,Portugal,Região Autónoma dos Açores,None
+17,Portugal,Lisboa,Oeiras
+18,Portugal,Viseu,Resende
+19,Portugal,Viseu,Vouzela
+20,Portugal,Região Autónoma da Madeira,None
+21,Portugal,Porto,Vila Nova de Gaia
+22,Portugal,None,None
+23,Portugal,Lisboa,Lisboa
+24,Portugal,Lisboa,Mafra
+25,Portugal,Portalegre,Alter do Chão
+26,Portugal,Porto,Porto
+27,Portugal,Porto,Gondomar
+28,Portugal,Lisboa,Torres Vedras
+29,Portugal,Leiria,Marinha Grande
+30,Portugal,Braga,Celorico de Basto
+31,Portugal,Viana do Castelo,Viana do Castelo
+32,Portugal,Évora,Arraiolos
+33,Portugal,Lisboa,Sintra
+34,Portugal,Braganca,Freixo Espada a Cinta
+35,Portugal,Faro,Loulé
+36,Portugal,Região Autónoma dos Açores,Ribeira Grande
+37,Portugal,Braga,Fafe
+38,Portugal,Aveiro,Santa Maria da Feira
+39,Portugal,Viseu,São João da Pesqueira
+40,Portugal,Porto,Paredes
+41,Portugal,Portalegre,Nisa
+42,Portugal,Santarém,Abrantes
+43,Portugal,Porto,Baião
+44,Portugal,Leiria,Pombal
+45,Portugal,Braga,Esposende
+46,Portugal,Santarém,Santarém
+47,Portugal,Região Autónoma dos Açores,"Calheta | Portugal, Região Autónoma dos Açores, Corvo | Portugal, Região Autónoma dos Açores, Horta | Portugal, Região Autónoma dos Açores, Lajes do Pico | Portugal, Região Autónoma dos Açores, Praia da Vitória | Portugal, Região Autónoma dos Açores, Ribeira Grande | Portugal, Região Autónoma dos Açores, Santa Cruz da Graciosa | Portugal, Região Autónoma dos Açores, Santa Cruz das Flores | Portugal, Região Autónoma dos Açores, Vila do Porto"
+48,Portugal,Faro,Lagoa
+49,Portugal,Porto,Matosinhos
+50,Portugal,Guarda,Seia
+51,Portugal,Coimbra,Lousã
+52,Portugal,Santarém,Almeirim
+53,Portugal,Setúbal,Setúbal
+54,Portugal,Castelo Branco,Covilhã
+55,Portugal,Setúbal,Montijo
+56,Portugal,Coimbra,Coimbra
+57,Portugal,Região Autónoma da Madeira,Santa Cruz
+58,Portugal,Faro,Aljezur
+59,Portugal,Faro,Vila Real Sto Antonio
+60,Portugal,Portalegre,None
+61,Portugal,Setúbal,Almada
+62,Portugal,Guarda,Almeida
+63,Portugal,Lisboa,Amadora
+64,Portugal,Portalegre,Portalegre
+65,Portugal,Coimbra,Penacova
+66,Portugal,Beja,Beja
+67,Portugal,Braganca,"Freixo Espada a Cinta | Portugal, Braganca, Mogadouro | Portugal, Braganca, Torre de Moncorvo | Portugal, Guarda, Vila Nova de Foz Coa"
+68,Portugal,Faro,Faro
+69,Portugal,Castelo Branco,"Covilhã | Portugal, Guarda, Manteigas"
+70,Portugal,Aveiro,Arouca
+71,Portugal,Aveiro,Espinho
+72,Portugal,Viseu,Tondela
+73,Portugal,Região Autónoma da Madeira,Santana
+74,Portugal,Beja,Alvito
+75,Portugal,Évora,Évora
+76,Portugal,Aveiro,Ovar
+77,Portugal,Coimbra,"Coimbra | Portugal, Évora, Évora | Portugal, Faro, Faro | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto"
+78,Portugal,Viseu,São Pedro do Sul
+79,Portugal,Lisboa,Loures
+80,Portugal,Viseu,Oliveira de Frades
+81,Portugal,Lisboa,Odivelas
+82,Portugal,Região Autónoma dos Açores,Corvo
+83,Portugal,Região Autónoma da Madeira,Calheta
+84,Portugal,Faro,Castro Marim
+85,Portugal,Coimbra,Cantanhede
+86,Portugal,Faro,"Portimão | Portugal, Leiria, Nazaré"
+87,Portugal,Porto,Marco de Canaveses
+88,Portugal,Braganca,None
+89,Portugal,Coimbra,Figueira da Foz
+90,Portugal,Faro,Silves
+91,Portugal,Vila Real,Boticas
+92,Portugal,Lisboa,Cadaval
+93,Portugal,Viseu,Sernancelhe
+94,Portugal,Distrito não determinado,Concelho não determinado
+95,Portugal,Vila Real,None
+96,Portugal,Castelo Branco,Proença-a-Nova
+97,Portugal,Setúbal,Sesimbra
+98,Portugal,Beja,"Aljustrel | Portugal, Beja, Alvito | Portugal, Beja, Barrancos | Portugal, Beja, Beja | Portugal, Beja, Cuba | Portugal, Beja, Ferreira do Alentejo | Portugal, Beja, Mértola | Portugal, Beja, Moura | Portugal, Beja, Serpa | Portugal, Beja, Vidigueira | Portugal, Évora, Alandroal | Portugal, Évora, Évora | Portugal, Évora, Mourão | Portugal, Évora, Portel | Portugal, Évora, Reguengos de Monsaraz | Portugal, Évora, Viana do Alentejo | Portugal, Portalegre, Elvas | Portugal, Setúbal, Alcácer do Sal | Portugal, Setúbal, Grandola | Portugal, Setúbal, Santiago do Cacém"
+99,Portugal,Lisboa,Cascais
+100,Portugal | Portugal,Santarém,Vila Nova da Barquinha
+101,Portugal,Santarém,Rio Maior
+102,Portugal,Leiria,"Caldas da Rainha | Portugal, Leiria, Leiria | Portugal, Leiria, Marinha Grande | Portugal, Leiria, Peniche"
+103,Portugal,Portugal Continental,None
+104,Portugal,Évora,Montemor-o-Novo
+105,Portugal,Beja,Aljustrel
+106,Portugal,Guarda,Pinhel
+107,Portugal,Guarda,Fig. Castelo Rodrigo
+108,Portugal,Setúbal,Seixal
+109,Portugal,Vila Real,Sta Marta de Penaguião
+110,Portugal,Coimbra,Tábua
+111,Portugal,Coimbra,Vila Nova de Poiares
+112,Portugal,Porto,Trofa
+113,Portugal,Setúbal,Santiago do Cacém
+114,Portugal,Guarda,Sabugal
+115,Portugal,Braga,Braga
+116,Portugal,Lisboa,Alenquer
+117,Portugal,Região Autónoma dos Açores,Praia da Vitória
+118,Portugal,Aveiro,Aveiro
+119,Portugal,Braga,Vila Verde
+120,Portugal,Viseu,Nelas
+121,Portugal,Setúbal,Sines
+122,Portugal,Setúbal,None
+123,Portugal,Braga,"Barcelos | Portugal, Porto, Amarante | Portugal, Vila Real, Vila Real"
+124,Portugal,Coimbra,Arganil
+125,Portugal,Guarda,Meda
+126,Portugal,Aveiro,Oliveira do Bairro
+127,Portugal,Faro,None
+128,Portugal,Coimbra,Oliveira do Hospital
+129,Portugal,Região Autónoma dos Açores,Lajes das Flores
+130,Portugal,Santarém,Alcanena
+131,Portugal,Setúbal,Grandola
+132,Portugal,Santarém,Tomar
+133,Portugal,Leiria,Nazaré
+134,Portugal,Castelo Branco,None
+135,Portugal,Braga,Vieira do Minho
+136,Portugal,Castelo Branco,Fundão
+137,Portugal,Coimbra,Penela
+138,Portugal,Região Autónoma da Madeira,Funchal
+139,Portugal,Aveiro,São João da Madeira
+140,Portugal,Vila Real,Murça
+141,Portugal,Faro,Monchique
+142,Portugal,Aveiro,Mealhada
+143,Portugal,Porto,Santo Tirso
+144,Portugal,Aveiro,Sever do Vouga
+145,Portugal,Castelo Branco,Vila de Rei
+146,Portugal,Castelo Branco,Castelo Branco
+147,Portugal,Faro,Olhão
+148,Portugal,Região Autónoma da Madeira,Câmara de Lobos
+149,Portugal,Região Autónoma da Madeira,Machico
+150,Portugal,Braga,"Guimarães | Portugal, Porto, Porto"
+151,Portugal,Setúbal,Alcochete
+152,Portugal,Leiria,Ansião
+153,Portugal,Coimbra,"Figueira da Foz | Portugal, Faro, Olhão | Portugal, Lisboa, Lisboa | Portugal, Porto, Matosinhos"
+154,Portugal,Porto,Penafiel
+155,Portugal,Braganca,Miranda do Douro
+156,Portugal,Viana do Castelo,Arcos de Valdevez
+157,Portugal,Viana do Castelo,Caminha
+158,Portugal,Viseu,Moimenta da Beira
+159,Portugal,Porto,Amarante
+160,Espanha | Portugal,Lisboa,Lisboa
+161,Portugal,Porto,Lousada
+162,Portugal,Santarém,Coruche
+163,Portugal,Aveiro,Ílhavo
+164,Portugal,Braga,"Barcelos | Portugal, Vila Real, Vila Real"
+165,Portugal,Região Autónoma dos Açores,Ponta Delgada
+166,Portugal | Portugal,Viseu,Resende
+167,Portugal,Braga,"Barcelos | Portugal, Braga, Braga | Portugal, Braga, Guimarães | Portugal, Coimbra, Coimbra | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto | Portugal, Viseu, Viseu"
+168,Portugal,Santarém,Torres Novas
+169,Portugal,Portalegre,Avis
+170,Portugal,Coimbra,Miranda do Corvo
+171,Portugal,Faro,Alcoutim
+172,Portugal,Guarda,Trancoso
+173,Portugal,Guarda,Guarda
+174,Portugal,Braganca,Vinhais
+175,Portugal,Leiria,Alcobaça
+176,Portugal,Faro,Vila do Bispo
+177,Portugal,Faro,Albufeira
+178,Portugal,Faro,"Albufeira | Portugal, Faro, Lagoa | Portugal, Faro, Lagos | Portugal, Faro, Vila do Bispo"
+179,Portugal,Braganca,Macedo de Cavaleiros
+180,Portugal,Coimbra,Mira
+181,Portugal | Portugal,Lisboa,Lisboa
+182,Portugal,Braganca,Bragança
+183,Portugal,Portalegre,Ponte de Sor
+184,Portugal,Lisboa,Sobral de Monte Agraço
+185,Portugal,Região Autónoma da Madeira,Ponta do Sol
+186,Portugal,Lisboa,"Lisboa | Portugal, Porto, Maia | Portugal, Porto, Porto"
+187,Portugal,Aveiro,Albergaria-a-Velha
+188,Portugal,Setúbal,Palmela
+189,Portugal,Braganca | Portugal,"Lisboa, Lisboa"
+190,Portugal,Viseu,Sátão
+191,Alemanha | França,None,None
+192,Portugal,Vila Real,Peso da Régua
+193,Portugal | Portugal,Viseu,Tondela
+194,Portugal,Aveiro,"Arouca | Portugal, Braga, Barcelos | Portugal, Braga, Celorico de Basto | Portugal, Braga, Guimarães | Portugal, Braganca, Mirandela | Portugal, Braganca, Torre de Moncorvo | Portugal, Guarda, Vila Nova de Foz Coa | Portugal, Porto, Felgueiras | Portugal, Porto, Maia | Portugal, Viana do Castelo, Viana do Castelo | Portugal, Vila Real, Mondim de Basto | Portugal, Vila Real, Valpaços | Portugal, Vila Real, Vila Real | Portugal, Viseu, Cinfães | Portugal, Viseu, Lamego"
+195,Portugal,Santarém,Sardoal
+196,Portugal,Braga,Vizela
+197,Portugal,Santarém,Ourém
+198,Portugal,Braganca,Mirandela
+199,Portugal,Coimbra,Pampilhosa da Serra
+200,Portugal,Coimbra,Montemor-o-Velho
+201,Portugal,Leiria,Bombarral
+202,Portugal,Aveiro,"Ílhavo | Portugal, Coimbra, Figueira da Foz | Portugal, Faro, Olhão | Portugal, Faro, Portimão | Portugal, Leiria, Nazaré | Portugal, Leiria, Peniche | Portugal, Lisboa, Lisboa | Portugal, Porto, Matosinhos | Portugal, Porto, Póvoa de Varzim | Portugal, Setúbal, Sesimbra | Portugal, Setúbal, Setúbal | Portugal, Viana do Castelo, Viana do Castelo"
+203,Portugal,Porto,"Porto | Portugal, Porto, Vila Nova de Gaia"
+204,Espanha | Portugal,Lisboa,None
+205,Portugal,Beja,Moura
+206,Portugal,Porto,Vila do Conde
+207,Portugal,Coimbra,None
+208,Portugal,Porto,Póvoa de Varzim
+209,Portugal,Guarda,Celorico da Beira
+210,Portugal,Viseu,Mangualde
+211,Portugal,Santarém,None
+212,Portugal,Região Autónoma dos Açores,Lagoa
+213,Portugal,Leiria,Porto de Mós
+214,Portugal,Região Autónoma dos Açores,Vila do Porto
+215,Portugal,Viseu,Mortágua
+216,Portugal,Porto,Maia
+217,Portugal,Aveiro,"Aveiro | Portugal, Coimbra, Coimbra | Portugal, Leiria, Leiria"
+218,Portugal,Guarda,Aguiar da Beira
+219,Portugal,Aveiro,"Arouca | Portugal, Viseu, Viseu"
+220,Portugal,Região Autónoma dos Açores,Santa Cruz das Flores
+221,Portugal,Viana do Castelo,"Arcos de Valdevez | Portugal, Viana do Castelo, Caminha | Portugal, Viana do Castelo, Paredes de Coura | Portugal, Viana do Castelo, Ponte de Lima | Portugal, Viana do Castelo, Valença | Portugal, Viana do Castelo, Vila Nova de Cerveira"
+222,Portugal,Viana do Castelo,Ponte da Barca
+223,Portugal,Viana do Castelo,Ponte de Lima
+224,Portugal,Leiria,Batalha
+225,Portugal,Lisboa,None
+226,Portugal,Guarda,Vila Nova de Foz Coa
+227,Portugal,Setúbal,Barreiro
+228,Portugal,Lisboa,Vila Franca de Xira
+229,Portugal,Região Autónoma dos Açores,Vila Franca do Campo
+230,Portugal,Leiria,Pedrogão Grande
+231,Portugal,Beja,Odemira
+232,Portugal,Aveiro,Águeda
+233,Portugal,Portalegre,Arronches
+234,Portugal,Braganca,Torre de Moncorvo
+235,Portugal,Évora,Mourão
+236,Portugal,Região Autónoma da Madeira,Porto Santo
+237,Portugal,Lisboa,"Lisboa | Portugal, Porto, Porto"
+238,Portugal,Leiria,Óbidos
+239,Portugal,Santarém,Ferreira do Zezere
+240,Portugal,Évora,Vendas Novas
+241,Portugal,Évora,Alandroal
+242,Portugal,Aveiro,"Oliveira de Azemeis | Portugal, Leiria, Caldas da Rainha | Portugal, Leiria, Marinha Grande | Portugal, Leiria, Peniche | Portugal, Lisboa, Lisboa | Portugal, Porto, Amarante | Portugal, Porto, Porto | Portugal, Porto, Trofa | Portugal, Porto, Valongo | Portugal, Santarém, Santarém | Portugal, Setúbal, Grandola | Portugal, Setúbal, Sines | Portugal, Viana do Castelo, Arcos de Valdevez"
+243,Portugal,Porto,Valongo
+244,Portugal,Aveiro,Anadia
+245,Portugal,Lisboa,"Lisboa | Portugal, Lisboa, Loures"
+246,Portugal,Braga,None
+247,Portugal,Évora,Viana do Alentejo
+248,Portugal,Portalegre,Elvas
+249,Portugal,Braganca,Alfandega da Fé
+250,Portugal,Leiria,Alvaiázere
+251,Portugal,Região Autónoma dos Açores,Angra do Heroismo
+252,Portugal,Santarém,Golegã
+253,Portugal,Região Autónoma dos Açores,"Calheta | Portugal, Região Autónoma dos Açores, Velas"
+254,Portugal,Aveiro,Vale de Cambra
+255,Portugal,Évora,None
+256,Portugal,Faro,Portimão
+257,Portugal,Aveiro,"Santa Maria da Feira | Portugal, Lisboa, Lisboa"
+258,Portugal,Castelo Branco,"Castelo Branco | Portugal, Castelo Branco, Fundão | Portugal, Castelo Branco, Idanha-a-Nova | Portugal, Castelo Branco, Proença-a-Nova | Portugal, Coimbra, Pampilhosa da Serra | Portugal, Guarda, Guarda | Portugal, Guarda, Meda | Portugal, Guarda, Pinhel | Portugal, Guarda, Sabugal | Portugal, Leiria, Pedrogão Grande"
+259,Portugal,Aveiro,"Arouca | Portugal, Viseu, Cinfães"
+260,Portugal,Viseu,Tabuaço
+261,Portugal,Viana do Castelo,Valença
+262,Portugal,Castelo Branco,Idanha-a-Nova
+263,Portugal,Viana do Castelo,Melgaço
+264,Portugal,Castelo Branco,Penamacor
+265,Portugal,Braga,Cabeceiras de Basto
+266,Portugal,Beja,Mértola
+267,Portugal,Viana do Castelo,None
+268,Portugal,Santarém,Mação
+269,Portugal,Região Autónoma da Madeira,Ribeira Brava
+270,Portugal,Setúbal,Alcácer do Sal
+271,Portugal,Braga,Amares
+272,Bélgica,None,None
+273,Portugal,Guarda,None
+274,Portugal,Évora,Estremoz
+275,Portugal,Viana do Castelo,Paredes de Coura
+276,Portugal,Região Autónoma dos Açores,Horta
+277,Portugal,Santarém,"Almeirim | Portugal, Santarém, Alpiarça | Portugal, Santarém, Benavente | Portugal, Santarém, Chamusca | Portugal, Santarém, Coruche | Portugal, Santarém, Salvaterra de Magos | Portugal, Santarém, Torres Novas"
+278,Portugal,Braga,Terras de Bouro
+279,Portugal,Viana do Castelo,Vila Nova de Cerveira
+280,Portugal,Beja,Ourique
+281,Portugal,Coimbra,Soure
+282,Portugal,Faro,Tavira
+283,Portugal,Leiria,Caldas da Rainha
+284,Portugal,Aveiro,"Águeda | Portugal, Aveiro, Albergaria-a-Velha | Portugal, Aveiro, Aveiro | Portugal, Aveiro, Estarreja | Portugal, Aveiro, Ílhavo | Portugal, Aveiro, Murtosa | Portugal, Aveiro, Oliveira do Bairro | Portugal, Aveiro, Ovar | Portugal, Aveiro, Santa Maria da Feira | Portugal, Aveiro, Vagos | Portugal, Coimbra, Cantanhede | Portugal, Coimbra, Mira"
+285,Portugal,Braganca,"Alfandega da Fé | Portugal, Braganca, Vila Flor"
+286,Portugal,Braga,"Vila Nova de Famalicão | Portugal, Lisboa, Lisboa | Portugal, Porto, Amarante | Portugal, Porto, Porto"
+287,Portugal,Santarém,Benavente
+288,Portugal,Viseu,Carregal do Sal
+289,Portugal,Aveiro,None
+290,Portugal,Évora,Vila Viçosa
+291,Portugal,Vila Real,Chaves
+292,Portugal,Lisboa | Portugal,Porto
+293,Portugal,Região Autónoma dos Açores,Velas
+294,Portugal,Vila Real,Ribeira de Pena
+295,Portugal,Santarém,Salvaterra de Magos
+296,Portugal,Lisboa,Azambuja
+297,Espanha,None,None
+298,Portugal,Beja,Almodovar
+299,Portugal,Braga,Póvoa de Lanhoso
+300,Portugal,Portalegre,Campo Maior
+301,Portugal,Braganca,"Alfandega da Fé | Portugal, Braganca, Bragança | Portugal, Braganca, Macedo de Cavaleiros | Portugal, Braganca, Miranda do Douro | Portugal, Braganca, Mirandela | Portugal, Braganca, Mogadouro | Portugal, Braganca, Vila Flor | Portugal, Braganca, Vimioso | Portugal, Braganca, Vinhais"
+302,Portugal,Faro,"Faro | Portugal, Faro, Portimão"
+303,Portugal,Santarém,Cartaxo
+304,Portugal,Braganca,Vila Flor
+305,Portugal,Região Autónoma dos Açores,Madalena
+306,Portugal,Viseu,Lamego
+307,Portugal,Coimbra,"Coimbra | Portugal, Faro, Faro | Portugal, Lisboa, Amadora | Portugal, Porto, Porto"
+308,Portugal | Portugal,Leiria,Castanheira de Pera
+309,Portugal,Portalegre,Sousel
+310,Portugal,Portalegre,Marvão
+311,Portugal,Lisboa,Arruda dos Vinhos
+312,Portugal,Beja,Ferreira do Alentejo
+313,Portugal,Região Autónoma dos Açores,"Lagoa | Portugal, Região Autónoma dos Açores, Nordeste | Portugal, Região Autónoma dos Açores, Ponta Delgada | Portugal, Região Autónoma dos Açores, Povoação | Portugal, Região Autónoma dos Açores, Ribeira Grande | Portugal, Região Autónoma dos Açores, Vila Franca do Campo"
+314,Portugal,Beja,Castro Verde
+315,Portugal,Aveiro,"Águeda | Portugal, Aveiro, Aveiro"
+316,Portugal,Coimbra,Condeixa-a-Nova
+317,Portugal,Guarda,Fornos de Algodres
+318,Portugal,Beja,Vidigueira
+319,Portugal,Aveiro,Oliveira de Azemeis
+320,Portugal,Portalegre,Gavião
+321,Portugal,Santarém,Entroncamento
+322,Portugal,Faro,"Faro | Portugal, Faro, Lagos"
+323,Portugal,Região Autónoma da Madeira,Porto Moniz
+324,Portugal,Região Autónoma dos Açores,"Angra do Heroismo | Portugal, Região Autónoma dos Açores, Ponta Delgada"
+325,Portugal,Vila Real,Valpaços
+326,Portugal,Viseu,Tarouca
+327,Portugal,Leiria,Castanheira de Pera
+328,Portugal,Évora,Redondo
+329,Portugal,Viana do Castelo,Monção
+330,Portugal,Setúbal,"Seixal | Portugal, Setúbal, Sesimbra"
+331,Portugal,Coimbra,"Coimbra | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto"
+332,Portugal,Leiria | Portugal,Lisboa
+333,Portugal,Portalegre,Crato
+334,Portugal,Braga,"Barcelos | Portugal, Porto, Santo Tirso"
+335,Portugal,Região Autónoma da Madeira,São Vicente
+336,Portugal,Região Autónoma dos Açores,Nordeste
+337,Portugal,Braga,"Barcelos | Portugal, Castelo Branco, Covilhã | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto | Portugal, Porto, Santo Tirso"
+338,Portugal,Viseu,Penedono
+339,Portugal,Viseu,Cinfães
+340,Portugal,Faro,"Faro | Portugal, Faro, Lagos | Portugal, Faro, Portimão"
+341,Portugal,Leiria,Peniche
+342,Portugal,Porto,None
+343,Portugal,Região Autónoma da Madeira | Portugal,Região Autónoma dos Açores
+344,Portugal,Setúbal,"Alcochete | Portugal, Setúbal, Barreiro | Portugal, Setúbal, Montijo | Portugal, Setúbal, Palmela | Portugal, Setúbal, Seixal | Portugal, Setúbal, Sesimbra | Portugal, Setúbal, Setúbal"
+345,Portugal,Vila Real,Vila Pouca de Aguiar
+346,Portugal,Aveiro,Vagos
+347,Portugal,Aveiro | Portugal,"Coimbra, Coimbra | Portugal, Leiria"
+348,Portugal,Santarém,Constancia
+349,Portugal,Região Autónoma da Madeira,"Funchal | Portugal, Região Autónoma da Madeira, Porto Santo"
+350,Portugal,Beja,Serpa
+351,Portugal,Lisboa,"Lisboa | Portugal, Porto"
+352,Portugal,Beja,"Aljustrel | Portugal, Setúbal, Grandola"
+353,Portugal,Beja,"Beja | Portugal, Évora, Borba | Portugal, Portalegre, Ponte de Sor | Portugal, Santarém, Rio Maior | Portugal, Santarém, Santarém | Portugal, Setúbal, Setúbal"
+354,Portugal,Braga | Portugal,"Porto | Portugal, Viana do Castelo"
+355,Portugal,Castelo Branco,Vila Velha de Ródão
+356,Portugal,Faro,Lagos
+357,Portugal,Braga,"Cabeceiras de Basto | Portugal, Braga, Póvoa de Lanhoso | Portugal, Braga, Vieira do Minho"
+358,Portugal,Região Autónoma dos Açores,Lajes do Pico
+359,Portugal,Castelo Branco,Belmonte
+360,Portugal,Leiria,"Leiria | Portugal, Leiria, Marinha Grande | Portugal, Leiria, Peniche"
+361,Portugal,Aveiro,Estarreja
+362,Portugal,Aveiro | Portugal,Leiria
+363,Portugal,Vila Real,Sabrosa
+364,Portugal,Coimbra,"Coimbra | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto | Portugal, Porto, Vila Nova de Gaia"
+365,Arábia Saudita,None,None
+366,Portugal,Coimbra,"Coimbra | Portugal, Coimbra, Lousã | Portugal, Coimbra, Miranda do Corvo"
+367,Portugal,Setúbal,Moita
+368,Portugal,Braganca,Carrazeda de Ansiães
+369,Portugal,Beja,Barrancos
+370,Portugal,Lisboa,"Lisboa | Portugal, Porto, Póvoa de Varzim"
+371,Alemanha | Áustria | Bélgica | Países Baixos | Suiça,None,None
+372,Portugal | Portugal,Lisboa,Oeiras
+373,Portugal | Portugal,Setúbal,Santiago do Cacém
+374,Portugal,Lisboa,"Cascais | Portugal, Lisboa, Lisboa"
+375,Portugal,Lisboa,"Loures | Portugal, Porto, Maia"
+376,Portugal,Lisboa,"Cascais | Portugal, Lisboa, Mafra"
+377,Reino Unido,None,None
+378,Portugal,Castelo Branco,"Belmonte | Portugal, Castelo Branco, Covilhã"
+379,Portugal,Vila Real,Mondim de Basto
+380,Portugal,Vila Real,Mesão Frio
+381,Portugal,Beja,"Aljustrel | Portugal, Beja, Ferreira do Alentejo | Portugal, Setúbal, Alcácer do Sal | Portugal, Setúbal, Grandola | Portugal, Setúbal, Santiago do Cacém | Portugal, Setúbal, Sines"
+382,Portugal,Coimbra,"Coimbra | Portugal, Lisboa, Lisboa"
+383,Portugal,Aveiro,"Aveiro | Portugal, Beja, Beja | Portugal, Braganca, Bragança | Portugal, Castelo Branco, Castelo Branco | Portugal, Évora, Évora | Portugal, Faro, Faro | Portugal, Guarda, Guarda | Portugal, Leiria, Leiria | Portugal, Lisboa, Lisboa | Portugal, Portalegre, Portalegre | Portugal, Porto, Porto | Portugal, Santarém, Santarém | Portugal, Setúbal, Setúbal | Portugal, Viana do Castelo, Viana do Castelo | Portugal, Vila Real, Vila Real | Portugal, Viseu, Viseu"
+384,Portugal | Portugal,Viseu,Penalva do Castelo
+385,Portugal,Viseu,Penalva do Castelo
+386,Portugal,Guarda,Manteigas
+387,Portugal,Coimbra,"Coimbra | Portugal, Leiria, Leiria"
+388,Portugal,Região Autónoma dos Açores,"Corvo | Portugal, Região Autónoma dos Açores, Horta | Portugal, Região Autónoma dos Açores, Praia da Vitória | Portugal, Região Autónoma dos Açores, Ribeira Grande | Portugal, Região Autónoma dos Açores, Santa Cruz da Graciosa | Portugal, Região Autónoma dos Açores, Santa Cruz das Flores | Portugal, Região Autónoma dos Açores, São Roque do Pico | Portugal, Região Autónoma dos Açores, Velas | Portugal, Região Autónoma dos Açores, Vila do Porto"
+389,Portugal,Santarém,Chamusca
+390,Portugal,Braganca,"Bragança | Portugal, Braganca, Macedo de Cavaleiros | Portugal, Braganca, Mirandela"
+391,Portugal,Évora | Portugal,Portalegre
+392,Portugal,Aveiro,"Castelo de Paiva | Portugal, Porto, Baião | Portugal, Porto, Felgueiras | Portugal, Porto, Gondomar | Portugal, Porto, Paços de Ferreira | Portugal, Porto, Penafiel | Portugal, Porto, Vila Nova de Gaia"
+393,Portugal,Braganca,Vimioso
+394,Portugal,Região Autónoma dos Açores,Povoação
+395,Portugal,Leiria,"Pedrogão Grande | Portugal, Santarém, Mação | Portugal, Santarém, Sardoal | Portugal, Santarém, Vila Nova da Barquinha"
+396,Portugal,Viseu,Armamar
+397,Portugal,Aveiro,"Aveiro | Portugal, Aveiro, Oliveira do Bairro | Portugal, Aveiro, Vagos"
+398,Portugal,Lisboa,"Lisboa | Portugal, Lisboa, Sintra"
+399,Portugal,Aveiro,"São João da Madeira | Portugal, Porto, Felgueiras"
+400,Portugal | Portugal,Aveiro,Santa Maria da Feira
+401,Portugal,Aveiro,"Águeda | Portugal, Aveiro, Albergaria-a-Velha | Portugal, Aveiro, Castelo de Paiva"
+402,Portugal,Beja,None
+403,Portugal,Viseu,Castro Daire
+404,Portugal,Castelo Branco,"Castelo Branco | Portugal, Coimbra, Coimbra | Portugal, Guarda, Guarda"
+405,Portugal,Braga,"Amares | Portugal, Braga, Barcelos | Portugal, Braga, Braga | Portugal, Braga, Esposende | Portugal, Braga, Terras de Bouro | Portugal, Braga, Vila Verde"
+406,Portugal,Vila Real,"Alijó | Portugal, Vila Real, Peso da Régua"
+407,Portugal,Braga,"Esposende | Portugal, Braganca, Bragança | Portugal, Braganca, Torre de Moncorvo | Portugal, Guarda, Vila Nova de Foz Coa | Portugal, Porto, Santo Tirso | Portugal, Viana do Castelo, Caminha | Portugal, Viana do Castelo, Viana do Castelo | Portugal, Vila Real, Chaves | Portugal, Vila Real, Ribeira de Pena | Portugal, Vila Real, Vila Real | Portugal, Viseu, Lamego | Portugal, Viseu, Resende"
+408,Portugal,Guarda,"Almeida | Portugal, Viseu, Nelas"
+409,Portugal,Coimbra,"Penela | Portugal, Leiria, Ansião"
+410,Portugal,Região Autónoma dos Açores,Santa Cruz da Graciosa
+411,Portugal,Castelo Branco,"Belmonte | Portugal, Castelo Branco, Covilhã | Portugal, Castelo Branco, Fundão"
+412,Portugal,Évora,Portel
+413,Portugal,Leiria,"Marinha Grande | Portugal, Leiria, Peniche"
+414,Portugal,Beja,"Odemira | Portugal, Setúbal, Alcácer do Sal | Portugal, Setúbal, Grandola | Portugal, Setúbal, Santiago do Cacém | Portugal, Setúbal, Sines"
+415,Portugal,Braga,"Fafe | Portugal, Braga, Guimarães | Portugal, Braga, Póvoa de Lanhoso | Portugal, Braga, Vieira do Minho | Portugal, Porto, Santo Tirso | Portugal, Viana do Castelo, Arcos de Valdevez | Portugal, Viana do Castelo, Caminha | Portugal, Viana do Castelo, Melgaço | Portugal, Viana do Castelo, Monção | Portugal, Viana do Castelo, Paredes de Coura | Portugal, Viana do Castelo, Ponte da Barca | Portugal, Viana do Castelo, Ponte de Lima | Portugal, Viana do Castelo, Valença | Portugal, Viana do Castelo, Viana do Castelo | Portugal, Viana do Castelo, Vila Nova de Cerveira"
+416,Portugal,Portugal Continental | Portugal,Região Autónoma da Madeira
+417,Portugal,Lisboa,Lourinhã
+418,Portugal,Braganca,Mogadouro
+419,Portugal,Santarém,"Almeirim | Portugal, Santarém, Cartaxo | Portugal, Santarém, Coruche | Portugal, Santarém, Salvaterra de Magos"
+420,Portugal,Braganca,"Alfandega da Fé | Portugal, Braganca, Bragança | Portugal, Guarda, Sabugal | Portugal, Guarda, Trancoso | Portugal, Vila Real, Alijó | Portugal, Vila Real, Chaves | Portugal, Vila Real, Murça | Portugal, Vila Real, Vila Pouca de Aguiar"
+421,Portugal,Região Autónoma dos Açores,São Roque do Pico
+422,Alemanha | Portugal,Castelo Branco,Idanha-a-Nova
+423,Portugal,Lisboa,"Lisboa | Portugal, Portalegre"
+424,Portugal,Região Autónoma dos Açores,"Angra do Heroismo | Portugal, Região Autónoma dos Açores, Praia da Vitória"
+425,Portugal,Coimbra,"Coimbra | Portugal, Lisboa, Odivelas"
+426,Portugal,Castelo Branco,Sertã
+427,Portugal,Região Autónoma dos Açores,Calheta
+428,Portugal,Castelo Branco,"Castelo Branco | Portugal, Castelo Branco, Covilhã | Portugal, Castelo Branco, Fundão | Portugal, Castelo Branco, Vila Velha de Ródão | Portugal, Santarém, Mação"
+429,Portugal,Faro,"Lagoa | Portugal, Leiria, Nazaré"
+430,Espanha | Portugal,Vila Real,Vila Real
+431,Portugal | Portugal,Setúbal,Almada
+432,Portugal,Viseu,Vila Nova de Paiva
+433,Portugal | Portugal,Setúbal,Seixal
+434,Portugal,Castelo Branco,Oleiros
+435,Portugal,Coimbra,"Coimbra | Portugal, Coimbra, Oliveira do Hospital"
+436,Portugal,Setúbal,"Alcochete | Portugal, Setúbal, Barreiro | Portugal, Setúbal, Moita | Portugal, Setúbal, Montijo | Portugal, Setúbal, Palmela | Portugal, Setúbal, Seixal | Portugal, Setúbal, Sesimbra | Portugal, Setúbal, Setúbal"
+437,Portugal,Porto,"Marco de Canaveses | Portugal, Porto, Porto | Portugal, Viseu, Viseu"
+438,Portugal,Évora,Mora
+439,Portugal,Porto,"Maia | Portugal, Vila Real, Vila Real"
+440,Portugal,Castelo Branco,"Covilhã | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto"
+441,Portugal,Lisboa,"Oeiras | Portugal, Lisboa, Sintra"
+442,Portugal,Évora,Borba
+443,Panamá,None,None
+444,Portugal,Faro,"Lagos | Portugal, Faro, Vila do Bispo"
+445,Portugal | Portugal,Porto,Porto
+446,Portugal,Porto,"Porto | Portugal, Setúbal, Barreiro | Portugal, Setúbal, Seixal"
+447,Portugal | Portugal,Coimbra,Lousã
+448,Portugal,Viseu,Santa Comba Dão
+449,Portugal,Braganca,"Freixo Espada a Cinta | Portugal, Braganca, Torre de Moncorvo | Portugal, Vila Real, Mesão Frio | Portugal, Vila Real, Murça | Portugal, Vila Real, Peso da Régua | Portugal, Vila Real, Sabrosa | Portugal, Vila Real, Sta Marta de Penaguião | Portugal, Vila Real, Vila Real"
+450,Portugal,Viana do Castelo,"Arcos de Valdevez | Portugal, Viana do Castelo, Caminha | Portugal, Viana do Castelo, Paredes de Coura | Portugal, Viana do Castelo, Ponte de Lima | Portugal, Viana do Castelo, Valença | Portugal, Viana do Castelo, Viana do Castelo | Portugal, Viana do Castelo, Vila Nova de Cerveira"
+451,Portugal,Coimbra,"Coimbra | Portugal, Faro, Albufeira | Portugal, Lisboa, Odivelas"
+452,Portugal,Porto,"Matosinhos | Portugal, Porto, Porto"
+453,Portugal,Évora,"Arraiolos | Portugal, Évora, Borba | Portugal, Évora, Évora | Portugal, Évora, Mora | Portugal, Évora, Vendas Novas | Portugal, Évora, Vila Viçosa"
+454,Portugal,Porto,"Gondomar | Portugal, Porto, Paredes | Portugal, Porto, Valongo"
+455,Alemanha,None,None
+456,Portugal,Coimbra,"Coimbra | Portugal, Faro, Faro | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto | Portugal, Porto, Vila Nova de Gaia"
+457,Portugal,Braga,"Braga | Portugal, Porto, Porto"
+458,Portugal,Faro,"Faro | Portugal, Faro, Lagos | Portugal, Faro, Portimão | Portugal, Faro, São Brás de Alportel"
+459,Portugal,Leiria,None
+460,Portugal,Portalegre,Castelo de Vide
+461,Portugal | Portugal,Coimbra,Arganil
+462,Portugal | Portugal,Évora,Évora
+463,Portugal,Aveiro | Portugal,"Braganca | Portugal, Porto"
+464,Portugal,Braga,"Barcelos | Portugal, Castelo Branco, Covilhã | Portugal, Lisboa, Lisboa | Portugal, Porto, Santo Tirso"
+465,Portugal,Braga,"Barcelos | Portugal, Castelo Branco, Covilhã | Portugal, Porto, Porto | Portugal, Porto, Santo Tirso"
+466,Portugal,Faro,"Olhão | Portugal, Porto, Matosinhos"
+467,Portugal,Distrito não determinado,"Concelho não determinado | Portugal, Viseu, Resende"
+468,Portugal,Coimbra | Portugal,"Distrito não determinado, Concelho não determinado"
+469,Portugal,Évora,Reguengos de Monsaraz
+470,Portugal,Lisboa,"Azambuja | Portugal, Porto, Paços de Ferreira"
+471,Portugal,Aveiro,"Oliveira de Azemeis | Portugal, Aveiro, Santa Maria da Feira"
+472,Portugal | Portugal,Leiria,Marinha Grande
+473,Portugal,Coimbra,"Penela | Portugal, Guarda, Pinhel | Portugal, Leiria, Ansião | Portugal, Leiria, Pombal"
+474,Indonésia,None,None
+475,Portugal,Porto,"Amarante | Portugal, Porto, Baião"
+476,Portugal,Évora,"Borba | Portugal, Portalegre, Ponte de Sor | Portugal, Santarém, Rio Maior | Portugal, Santarém, Santarém | Portugal, Setúbal, Setúbal"
+477,Portugal,Beja,"Beja | Portugal, Évora, Évora"
+478,Portugal,Évora,"Évora | Portugal, Lisboa, Oeiras | Portugal, Porto, Vila do Conde"
+479,Portugal | Portugal,Porto,None
+480,Espanha | Portugal,None,None
+481,Portugal,Braga,"Amares | Portugal, Braga, Terras de Bouro"
+482,Portugal,Viseu,"Lamego | Portugal, Viseu, Viseu"
+483,Portugal,Viana do Castelo,"Melgaço | Portugal, Viana do Castelo, Monção | Portugal, Viana do Castelo, Paredes de Coura"
+484,Portugal,Beja,"Odemira | Portugal, Setúbal, Santiago do Cacém"
+485,Portugal | Portugal,Região Autónoma dos Açores,São Roque do Pico
+486,Portugal,Leiria,Figueiró dos Vinhos
+487,Portugal,Castelo Branco,"Belmonte | Portugal, Castelo Branco, Vila Velha de Ródão | Portugal, Guarda, Celorico da Beira | Portugal, Guarda, Guarda | Portugal, Guarda, Pinhel | Portugal, Guarda, Trancoso"
+488,Portugal,Beja,Cuba
+489,Portugal,Coimbra | Portugal,Leiria
+490,Portugal,Aveiro,"Arouca | Portugal, Aveiro, Espinho | Portugal, Aveiro, Oliveira de Azemeis | Portugal, Aveiro, Santa Maria da Feira | Portugal, Aveiro, São João da Madeira | Portugal, Aveiro, Vale de Cambra | Portugal, Braga | Portugal, Braganca | Portugal, Guarda, Vila Nova de Foz Coa | Portugal, Porto | Portugal, Viana do Castelo | Portugal, Vila Real | Portugal, Viseu, Armamar | Portugal, Viseu, Cinfães | Portugal, Viseu, Moimenta da Beira | Portugal, Viseu, Penedono | Portugal, Viseu, Resende | Portugal, Viseu, São João da Pesqueira | Portugal, Viseu, Sernancelhe | Portugal, Viseu, Tabuaço | Portugal, Viseu, Tarouca"
+491,Portugal,Braganca,"Miranda do Douro | Portugal, Braganca, Mirandela"
+492,Portugal,Santarém,Alpiarça
+493,Portugal,Beja | Portugal,"Évora | Portugal, Portalegre | Portugal, Santarém"
+494,Portugal,Leiria,"Óbidos | Portugal, Lisboa, Lisboa"
+495,Portugal,Leiria,"Nazaré | Portugal, Leiria, Peniche"
+496,Portugal,Setúbal,"Santiago do Cacém | Portugal, Setúbal, Sines"
+497,Portugal,Guarda,Gouveia
+498,Portugal,Faro,"Castro Marim | Portugal, Faro, Portimão | Portugal, Faro, Silves | Portugal, Faro, Tavira"
+499,Portugal,Porto,"Felgueiras | Portugal, Porto, Porto"
+500,Portugal,Lisboa,"Cascais | Portugal, Lisboa, Oeiras"
+501,Portugal,Lisboa,"Lisboa | Portugal, Setúbal, Almada"
+502,Portugal,Aveiro,"Anadia | Portugal, Viseu, Nelas | Portugal, Viseu, Viseu"
+503,Portugal,Braganca,"Bragança | Portugal, Braganca, Mirandela"
+504,Portugal,Região Autónoma da Madeira,"Ribeira Brava | Portugal, Região Autónoma da Madeira, Santa Cruz"
+505,Portugal,Braganca,"Alfandega da Fé | Portugal, Braganca, Bragança | Portugal, Braganca, Macedo de Cavaleiros | Portugal, Braganca, Torre de Moncorvo | Portugal, Braganca, Vila Flor | Portugal, Guarda, Vila Nova de Foz Coa | Portugal, Vila Real, Chaves | Portugal, Vila Real, Mesão Frio | Portugal, Vila Real, Sta Marta de Penaguião | Portugal, Vila Real, Vila Real | Portugal, Viseu, Resende"
+506,Portugal,Leiria,"Alvaiázere | Portugal, Leiria, Figueiró dos Vinhos"
+507,Portugal,Braganca,"Bragança | Portugal, Vila Real, Chaves"
+508,Portugal,Aveiro,"Castelo de Paiva | Portugal, Porto, Paredes | Portugal, Porto, Penafiel | Portugal, Viseu, Cinfães"
+509,Portugal,Santarém,Vila Nova da Barquinha
+510,Portugal,Faro,"Silves | Portugal, Faro, Tavira"
+511,Portugal,Faro,"Faro | Portugal, Faro, Portimão | Portugal, Setúbal, Sines"
+512,Portugal,Aveiro,"Arouca | Portugal, Braga, Celorico de Basto | Portugal, Braga, Fafe | Portugal, Porto, Amarante | Portugal, Porto, Baião | Portugal, Porto, Santo Tirso | Portugal, Porto, Trofa | Portugal, Viseu, Cinfães"
+513,Portugal,Beja,"Cuba | Portugal, Beja, Vidigueira"
+514,Portugal,Faro,"Faro | Portugal, Lisboa | Portugal, Porto, Porto"
+515,Portugal,Braganca,"Bragança | Portugal, Braganca, Macedo de Cavaleiros | Portugal, Braganca, Mirandela | Portugal, Braganca, Vila Flor"
+516,Portugal,Aveiro,"Castelo de Paiva | Portugal, Porto, Penafiel"
+517,Portugal,Aveiro,"Águeda | Portugal, Aveiro, Albergaria-a-Velha | Portugal, Aveiro, Aveiro | Portugal, Aveiro, Estarreja | Portugal, Aveiro, Ílhavo | Portugal, Aveiro, Murtosa | Portugal, Aveiro, Oliveira do Bairro | Portugal, Aveiro, Ovar | Portugal, Aveiro, Sever do Vouga | Portugal, Aveiro, Vagos"
+518,Portugal | Portugal,Região Autónoma da Madeira,Calheta
+519,Portugal,Lisboa,"Lisboa | Portugal, Lisboa, Oeiras"
+520,Portugal,Aveiro,Murtosa
+521,Portugal,Porto,"Porto | Portugal, Vila Real, Peso da Régua"
+522,Portugal,Braga,"Esposende | Portugal, Braga, Guimarães | Portugal, Braga, Vila Verde | Portugal, Porto, Amarante | Portugal, Viana do Castelo, Melgaço"
+523,Portugal,Lisboa,"Amadora | Portugal, Lisboa, Lisboa | Portugal, Lisboa, Odivelas | Portugal, Setúbal, Almada | Portugal, Setúbal, Seixal"
+524,Portugal,Portalegre,Fronteira
+525,Portugal,Região Autónoma da Madeira,"Câmara de Lobos | Portugal, Região Autónoma da Madeira, Funchal | Portugal, Região Autónoma da Madeira, Machico | Portugal, Região Autónoma da Madeira, Porto Santo | Portugal, Região Autónoma da Madeira, Ribeira Brava | Portugal, Região Autónoma da Madeira, Santa Cruz"
+526,Portugal,Coimbra,"Góis | Portugal, Leiria, Castanheira de Pera"
+527,Portugal,Faro,"Lagoa | Portugal, Faro, Silves"
+528,Portugal,Faro,"Albufeira | Portugal, Faro, Lagoa | Portugal, Faro, Loulé | Portugal, Faro, São Brás de Alportel | Portugal, Faro, Silves"
+529,Portugal,Lisboa,"Cascais | Portugal, Lisboa, Mafra | Portugal, Santarém, Chamusca"
+530,Portugal,Lisboa,"Alenquer | Portugal, Lisboa, Lisboa"
+531,Portugal,Vila Real,"Mesão Frio | Portugal, Vila Real, Sta Marta de Penaguião"
+532,Portugal,Faro,"Lagos | Portugal, Faro, Portimão"
+533,Portugal,Évora | Portugal,"Évora, Évora"
+534,Portugal | Portugal,Aveiro,None
+535,Portugal,Portalegre,Monforte
+536,Portugal,Vila Real,"Chaves | Portugal, Vila Real, Ribeira de Pena"
+537,Portugal,Lisboa | Quénia,None
+538,Suiça,None,None
+539,Itália,None,None
+540,Portugal | Portugal,Distrito não determinado,Concelho não determinado
+541,Portugal,Faro,"Faro | Portugal, Lisboa, Lisboa | Portugal, Porto, Matosinhos | Portugal, Região Autónoma da Madeira, Funchal | Portugal, Setúbal, Barreiro"
+542,Portugal,Braga,"Braga | Portugal, Braga, Guimarães"
+543,Portugal,Porto,"Lousada | Portugal, Porto, Penafiel"
+544,Emiratos Árabes Unidos,None,None
+545,Portugal | Portugal,Braga,Póvoa de Lanhoso
+546,Portugal,Braganca,"Alfandega da Fé | Portugal, Braganca, Bragança | Portugal, Vila Real, Alijó | Portugal, Vila Real, Murça | Portugal, Vila Real, Valpaços"
+547,Portugal,Porto,"Porto | Portugal, Porto, Vila do Conde"
+548,Portugal,Beja,"Cuba | Portugal, Évora, Montemor-o-Novo | Portugal, Évora, Viana do Alentejo"
+549,Espanha | Portugal,Beja,None
+550,Portugal,Região Autónoma dos Açores,"Angra do Heroismo | Portugal, Região Autónoma dos Açores, Horta | Portugal, Região Autónoma dos Açores, Ponta Delgada"
+551,Estados Unidos,None,None
+552,Portugal,Guarda,"Aguiar da Beira | Portugal, Viseu, Sernancelhe"
+553,Portugal,Porto,"Felgueiras | Portugal, Porto, Lousada | Portugal, Porto, Paços de Ferreira | Portugal, Porto, Paredes | Portugal, Porto, Valongo"
+554,Portugal,Faro,"Tavira | Portugal, Faro, Vila Real Sto Antonio"
+555,Portugal,Castelo Branco,"Castelo Branco | Portugal, Castelo Branco, Fundão"
+556,Portugal,Portalegre,"Alter do Chão | Portugal, Portalegre, Castelo de Vide | Portugal, Portalegre, Crato | Portugal, Portalegre, Fronteira"
+557,Portugal,Lisboa,"Lisboa | Portugal, Porto, Porto | Portugal, Setúbal, Barreiro"
+558,Portugal,Faro,"Lagos | Portugal, Faro, Olhão | Portugal, Faro, Portimão | Portugal, Faro, Tavira | Portugal, Faro, Vila Real Sto Antonio"
+559,Portugal,Faro,"Albufeira | Portugal, Faro, Loulé | Portugal, Faro, Olhão | Portugal, Faro, Portimão"
+560,Portugal,Portugal Continental | Portugal,Região Autónoma dos Açores
+561,Portugal,Setúbal,"Alcochete | Portugal, Setúbal, Barreiro | Portugal, Setúbal, Moita | Portugal, Setúbal, Montijo | Portugal, Setúbal, Palmela | Portugal, Setúbal, Seixal | Portugal, Setúbal, Sesimbra"
+562,Portugal,Portalegre,"Elvas | Portugal, Portalegre, Portalegre"
+563,Portugal,Aveiro,"Oliveira de Azemeis | Portugal, Leiria, Caldas da Rainha | Portugal, Leiria, Marinha Grande | Portugal, Leiria, Peniche | Portugal, Lisboa, Lisboa | Portugal, Lisboa, Torres Vedras | Portugal, Porto, Amarante | Portugal, Porto, Porto | Portugal, Porto, Trofa | Portugal, Porto, Valongo | Portugal, Santarém, Santarém | Portugal, Setúbal, Sines | Portugal, Viana do Castelo, Arcos de Valdevez"
+564,Portugal,Coimbra,"Coimbra | Portugal, Faro, Loulé | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto"
+565,Espanha | Portugal,Lisboa,Vila Franca de Xira
+566,Portugal,Faro,"Castro Marim | Portugal, Guarda, Almeida | Portugal, Viana do Castelo, Viana do Castelo | Portugal, Vila Real, Chaves"
+567,Portugal | Portugal,Faro,Aljezur
+568,Portugal,Viseu | Portugal,"Viseu, Tabuaço"
+569,Portugal,Faro,"Loulé | Portugal, Faro, Olhão"
+570,Bélgica | Espanha | Portugal,None,None
+571,Portugal | Portugal,Aveiro,"Aveiro | Portugal, Castelo Branco, Castelo Branco | Portugal, Coimbra, Coimbra | Portugal, Guarda, Guarda | Portugal, Leiria, Leiria | Portugal, Viseu, Viseu"
+572,Portugal,Aveiro,"Castelo de Paiva | Portugal, Porto, Baião | Portugal, Porto, Felgueiras | Portugal, Porto, Paços de Ferreira"
+573,Portugal,Porto,"Porto | Portugal, Porto, Santo Tirso"
+574,Portugal,Viana do Castelo,"Caminha | Portugal, Viana do Castelo, Vila Nova de Cerveira"
+575,Portugal | Portugal,Braganca,Bragança
+576,Bélgica | Portugal,Lisboa,None
+577,Bélgica | Portugal,Porto,None
+578,Portugal,Região Autónoma da Madeira,"Ponta do Sol | Portugal, Região Autónoma da Madeira, Porto Moniz | Portugal, Região Autónoma da Madeira, Ribeira Brava | Portugal, Região Autónoma da Madeira, São Vicente"
+579,Portugal,Castelo Branco,"Covilhã | Portugal, Castelo Branco, Fundão | Portugal, Castelo Branco, Penamacor | Portugal, Guarda, Almeida | Portugal, Guarda, Fornos de Algodres | Portugal, Guarda, Gouveia | Portugal, Guarda, Guarda | Portugal, Guarda, Meda | Portugal, Guarda, Pinhel | Portugal, Guarda, Sabugal | Portugal, Guarda, Seia | Portugal, Guarda, Trancoso"
+580,Portugal,Lisboa,"Lisboa | Portugal, Porto, Matosinhos | Portugal, Região Autónoma dos Açores, Ponta Delgada | Portugal, Setúbal, Almada | Portugal, Setúbal, Seixal"
+581,Portugal,Lisboa,"Azambuja | Portugal, Santarém, Almeirim | Portugal, Santarém, Alpiarça | Portugal, Santarém, Benavente | Portugal, Santarém, Cartaxo | Portugal, Santarém, Chamusca | Portugal, Santarém, Coruche | Portugal, Santarém, Golegã | Portugal, Santarém, Rio Maior | Portugal, Santarém, Salvaterra de Magos | Portugal, Santarém, Santarém"
+582,Portugal,Porto,"Baião | Portugal, Porto, Marco de Canaveses | Portugal, Vila Real, Mesão Frio | Portugal, Vila Real, Peso da Régua"
+583,Portugal,Aveiro | Portugal,"Braga | Portugal, Coimbra | Portugal, Porto | Portugal, Viana do Castelo | Portugal, Viseu"
+584,Portugal,Coimbra,"Condeixa-a-Nova | Portugal, Leiria, Caldas da Rainha | Portugal, Leiria, Peniche | Portugal, Lisboa, Lisboa | Portugal, Lisboa, Vila Franca de Xira | Portugal, Santarém, Golegã"
+585,Portugal | Portugal,Região Autónoma dos Açores,None
+586,Portugal | Portugal,Faro,Faro
+587,Portugal,Porto,"Amarante | Portugal, Porto, Porto | Portugal, Porto, Trofa | Portugal, Porto, Valongo | Portugal, Viana do Castelo, Arcos de Valdevez"
+588,Cabo Verde | Portugal,Santarém,Santarém
+589,Hungria,None,None
+590,Portugal,Lisboa,"Amadora | Portugal, Lisboa, Lisboa | Portugal, Lisboa, Sintra | Portugal, Lisboa, Torres Vedras"
+591,Portugal,Coimbra,"Coimbra | Portugal, Coimbra, Condeixa-a-Nova | Portugal, Coimbra, Góis | Portugal, Coimbra, Tábua | Portugal, Coimbra, Vila Nova de Poiares | Portugal, Viseu, Mortágua"
+592,Portugal,Leiria,"Leiria | Portugal, Lisboa, Lisboa | Portugal, Porto, Matosinhos"
+593,Portugal,Coimbra,"Oliveira do Hospital | Portugal, Coimbra, Tábua | Portugal, Guarda, Seia"
+594,Portugal,Coimbra,"Soure | Portugal, Lisboa, Alenquer"
+595,Portugal | Portugal,Viseu,Mangualde
+596,Portugal,Vila Real,"Vila Real | Portugal, Viseu, Sernancelhe"
+597,Portugal,Beja,"Beja | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto | Portugal, Setúbal, Barreiro | Portugal, Setúbal, Seixal"
+598,Portugal,Santarém,"Entroncamento | Portugal, Santarém, Tomar"
+599,Portugal,Faro,"Albufeira | Portugal, Faro, Faro | Portugal, Faro, Lagos | Portugal, Faro, Loulé | Portugal, Faro, Portimão | Portugal, Faro, Vila Real Sto Antonio"
+600,Portugal,Braga,"Guimarães | Portugal, Viana do Castelo, Arcos de Valdevez | Portugal, Viseu, Moimenta da Beira"
+601,Portugal,Lisboa,"Lisboa | Portugal, Lisboa, Loures | Portugal, Lisboa, Torres Vedras"
+602,Portugal,Faro | Portugal,Lisboa
+603,Portugal,Leiria,"Alcobaça | Portugal, Lisboa, Lisboa | Portugal, Lisboa, Oeiras | Portugal, Lisboa, Torres Vedras | Portugal, Portalegre, Elvas | Portugal, Porto, Vila do Conde | Portugal, Santarém, Santarém"
+604,Portugal,Leiria,"Leiria | Portugal, Santarém, Ourém"
+605,Portugal,Évora,"Évora | Portugal, Porto"
+606,Portugal,Castelo Branco,"Castelo Branco | Portugal, Castelo Branco, Covilhã"
+607,Portugal,Lisboa,"Alenquer | Portugal, Lisboa, Lisboa | Portugal, Porto, Porto"
+608,Portugal,Aveiro,"Oliveira de Azemeis | Portugal, Aveiro, Santa Maria da Feira | Portugal, Aveiro, São João da Madeira"
+609,Portugal,Vila Real,"Peso da Régua | Portugal, Vila Real, Vila Real"
+610,Portugal,Faro,"Olhão | Portugal, Faro, Vila Real Sto Antonio"

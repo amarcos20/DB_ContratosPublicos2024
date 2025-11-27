@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h2>Estatísticas Gerais (Resumo) 📋</h2>
+    {% if stats %}
+        <p><strong>Total de Contratos Registados:</strong> {{ stats.n_contratos }}</p>
+        <p><strong>Valor Médio dos Contratos:</strong> € {{ stats.valor_medio_contrato }}</p>
+        <p><strong>Prazo Máximo de Execução:</strong> {{ stats.prazo_maximo }} dias</p>
+    {% else %}
+        <p>Erro ao carregar estatísticas ou base de dados vazia.</p>
+    {% endif %}
+
+    <hr>
+    <h2>Lista de Consultas (Queries)</h2>
+    <ul>
+        <li><a href="/queries/query_1">Query 1: Contagem e Valor Total/Médio dos Contratos</a></li>
+        <li><a href="/queries/query_2">Query 2: Pesquisa de Contratos por Entidade (Adjudicante/Adjudicatário)</a></li>
+        <li><a href="/queries/query_3">Query 3: Contratos por Ano de Celebração</a></li>
+        <li><a href="/queries/query_4">Query 4: Contrato com o Valor Máximo</a></li>
+        <li><a href="/queries/query_5">Query 5: Contagem de Contratos por Distrito</a></li>
+        <li><a href="/queries/query_6">Query 6: Top 5 Tipos de Contrato</a></li>
+        <li><a href="/queries/query_7">Query 7: Contagem por Tipo de Procedimento</a></li>
+        <li><a href="/queries/query_8">Query 8: Top 10 Códigos CPV (Descrição)</a></li>
+        <li><a href="/queries/query_9">Query 9: Contagem por Artigo de Fundamentação</a></li>
+        <li><a href="/queries/query_10">Query 10: Prazo Médio de Execução por Tipo de Contrato (Dias)</a></li>
+        <li><a href="/queries/query_11">Query 11: Top 10 Adjudicantes por Valor</a></li>
+        <li><a href="/queries/query_12">Query 12: Top 10 Adjudicatários por Número de Contratos</a></li>
+        <li><a href="/queries/query_13">Query 13: Pesquisa por Objeto (Requer Parâmetro 'termo')</a></li>
+        <li><a href="/queries/query_14">Query 14: Contratos Celebrados em Acordo-Quadro</a></li>
+        <li><a href="/queries/query_15">Query 15: Entidades Registadas sem NIF</a></li>
+    </ul>
+{% endblock %}

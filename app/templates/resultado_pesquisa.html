@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ titulo }}</h2>
+    
+    <form action="/queries/query_13" method="GET">
+        <label for="termo">Pesquisar Objeto:</label>
+        <input type="text" id="termo" name="termo" value="{{ termo_pesquisado }}" required>
+        <button type="submit">Pesquisar</button>
+    </form>
+    
+    {% if resultados %}
+        <h3>Resultados encontrados ({{ resultados | length }}):</h3>
+        <table>
+            <thead>
+                <tr>
+                    {% for coluna in colunas %}
+                    <th>{{ coluna }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for linha in resultados %}
+                <tr>
+                    {% for valor in linha %}
+                    <td>{{ valor }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% elif termo_pesquisado != 'Todos' %}
+        <p>Não foram encontrados resultados para o termo: <strong>{{ termo_pesquisado }}</strong></p>
+    {% endif %}
+
+    <a href="/" class="back-link">← Voltar ao Dashboard</a>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ titulo }}</h2>
+    
+    {% if resultados %}
+        <table>
+            <thead>
+                <tr>
+                    {% for coluna in colunas %}
+                    <th>{{ coluna }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for linha in resultados %}
+                <tr>
+                    {% for valor in linha %}
+                    <td>{{ valor }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Não foram encontrados resultados para esta consulta.</p>
+    {% endif %}
+
+    <a href="/" class="back-link">← Voltar ao Dashboard</a>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ titulo }}{% endblock %}
+
+{% block content %}
+    <h2>{{ titulo }}</h2>
+    
+    {% if resultado %}
+        <ul>
+            {% for chave, valor in resultado.items() %}
+                <li><strong>{{ chave }}:</strong> {{ valor }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Não foi encontrado nenhum resultado agregado.</p>
+    {% endif %}
+
+    <a href="/" class="back-link">← Voltar ao Dashboard</a>
+{% endblock %}

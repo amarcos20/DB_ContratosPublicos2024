@@ -1,0 +1,20 @@
+ID,tipoContrato
+1,Aquisição de serviços
+2,Empreitadas de obras públicas
+3,Aquisição de bens móveis
+4,Locação de bens móveis
+5,Concessão de serviços públicos
+6,Aquisição de serviços | Locação de bens móveis
+7,Aquisição de bens móveis | Aquisição de serviços
+8,Aquisição de serviços | Empreitadas de obras públicas
+9,Aquisição de serviços | Sociedade
+10,Aquisição de serviços | Concessão de serviços públicos
+11,Empreitadas de obras públicas | Locação de bens móveis
+12,Aquisição de bens móveis | Sociedade
+13,Aquisição de serviços | Locação de bens móveis | Sociedade
+14,Concessão de obras públicas | Empreitadas de obras públicas
+15,Aquisição de bens móveis | Locação de bens móveis
+16,Aquisição de serviços | Concessão de obras públicas | Concessão de serviços públicos
+17,Outros
+18,Concessão de obras públicas
+19,Aquisição de bens móveis | Aquisição de serviços | Locação de bens móveis
