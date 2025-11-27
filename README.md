@@ -1,13 +1,3 @@
-Public Contracts Database Project (2024 Data)
-This project focuses on creating a structured, comprehensive dimensional database from public procurement data for the year 2024. The primary goal is to perform a robust Extract, Transform, Load (ETL) process to normalize and integrate raw data from various sources into a clean, relational structure suitable for advanced analysis and Business Intelligence (BI) tools.
-
-I. Project Objectives
-Data Normalization and Transformation
-Data Aggregation: Consolidate raw contract records from diverse original CSV files (e.g., adjudicators, awardees, CPV codes, location data).
-Unification of Entities: Merge similar tables (e.g., adjudicators and awardees) and apply deduplication rules (based on NIF/Name) to create a single, …
-[17:43, 27/11/2025] Afonso Marcos: # Public Contracts Database Project (2024 Data)
-
-This project focuses on creating a structured, comprehensive *dimensional database* from public procurement data for the year *2024. The primary goal is to perform a robust Extract, Transform, Load (ETL*) process to normalize and integrate raw data from various sources into a clean, relational structure suitable for advanced analysis and Business Intelligence (BI) tools.
 
 ---
 
