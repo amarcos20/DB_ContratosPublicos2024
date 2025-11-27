@@ -1,4 +1,4 @@
-[17:43, 27/11/2025] Afonso Marcos: Public Contracts Database Project (2024 Data)
+Public Contracts Database Project (2024 Data)
 This project focuses on creating a structured, comprehensive dimensional database from public procurement data for the year 2024. The primary goal is to perform a robust Extract, Transform, Load (ETL) process to normalize and integrate raw data from various sources into a clean, relational structure suitable for advanced analysis and Business Intelligence (BI) tools.
 
 I. Project Objectives
