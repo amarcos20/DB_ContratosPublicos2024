@@ -1,92 +1,92 @@
-ID,Artigo,Numero_n,Alinea
-1,20,1,c
-2,19,,c
-3,20,1,d
-4,24,1,e
-5,155,,
-6,20,1,b
-7,26,1,a
-8,20,27,a
-9,20,1,a
-10,27,1,b
-11,259,,
-12,258,,
-13,24,1,e
-14,26,1,e
-15,19,,a
-16,24,1,e
-17,21,1,c
-18,27,1,b
-19,19,,d
-20,27,1,a
-21,31,4,
-22,24,1,c
-23,19,,b
-24,22,1,a
-25,20,1,c
-26,7,1,
-27,19,,d
-28,20,1,d
-29,2,30,b
-30,265,1,
-31,32,2,
-32,21,1,b
-33,24,1,a
-34,27,1,i
-35,25,1,c
-36,24,6,
-37,19,27,a
-38,33,1,
-39,19,27,b
-40,24,1,b
-41,24,1,b
-42,11,,
-43,6,1,
-44,24,5,
-45,24,3,
-46,27,1,h
-47,24,1,a
-48,20,27,b
-49,6,30,a
-50,26,1,c
-51,252,1,b
-52,26,2,b
-53,21,27,a
-54,21,2,
-55,24,1,d
-56,155,,b
-57,24,6,a
-58,22,1,b
-59,24,8,
-60,21,1,a
-61,3,1,
-62,3,1,b
-63,27,1,e
-64,26,1,b
-65,26,1,d
-66,3,1,
-67,3,30,b
-68,27,,
-69,27,1,d
-70,155,,a
-71,27,1,g
-72,9,54,
-73,5,4,
-74,31,4,
-75,5,1,
-76,24,1,e
-77,31,1,
-78,24,6,b
-79,4,30,b
-80,3,30,a
-81,241,,
-82,5,4,
-83,1,766,
-84,27,1,c
-85,6,30,b
-86,32,3,
-87,26,1,f
-88,19,6,c
-89,31,2,
-90,24,4,
-91,2,1,
+ID,fundamentacao,Artigo,Numero_n,Alinea
+1,"Artigo 20.º, n.º 1, alínea c) do Código dos Contratos Públicos",20,1,c
+2,"Artigo 19.º, alínea c) do Código dos Contratos Públicos",20,1,c
+3,"Artigo 20.º, n.º 1, alínea d) do Código dos Contratos Públicos",19,,c
+4,"Artigo 24.º, n.º 1, alínea e), subalínea ii) do Código dos Contratos Públicos",20,1,d
+5,Artigo 155.º do Código dos Contratos Públicos,20,1,c
+6,"Artigo 20.º, n.º 1, alínea b) do Código dos Contratos Públicos",20,1,d
+7,"Artigo 26.º, n.º 1, alínea a) do Código dos Contratos Públicos",20,1,d
+8,"Artigo 20.º, alínea a) do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",20,1,c
+9,"Artigo 20.º, n.º 1, alínea a) do Código dos Contratos Públicos",20,1,c
+10,"Artigo 27.º, n.º 1, alínea b) e n.º 3 do Código dos Contratos Públicos",20,1,c
+11,Artigo 259.º do Código dos Contratos Públicos,20,1,c
+12,Artigo 258.º do Código dos Contratos Públicos,24,1,e
+13,"Artigo 24.º, n.º 1, alínea e), subalínea iii) do Código dos Contratos Públicos",155,,
+14,"Artigo 26.º, n.º 1, alínea e) do Código dos Contratos Públicos",20,1,b
+15,"Artigo 19.º, alínea a) do Código dos Contratos Públicos",20,1,d
+16,"Artigo 24.º, n.º 1, alínea e), subalínea i) do Código dos Contratos Públicos",20,1,c
+17,"Artigo 21.º, n.º 1, alínea c) do Código dos Contratos Públicos",26,1,a
+18,"Artigo 27.º, n.º 1, alínea b) do Código dos Contratos Públicos",20,27,a
+19,"Artigo 19.º, alínea d) do Código dos Contratos Públicos",20,1,a
+20,"Artigo 27.º, n.º 1, alínea a) do Código dos Contratos Públicos",27,1,b
+21,"Artigo 31.º, n.º 4 do Código dos Contratos Públicos",259,,
+22,"Artigo 24.º, n.º 1, alínea c) do Código dos Contratos Públicos",20,1,c
+23,"Artigo 19.º, alínea b) do Código dos Contratos Públicos",259,,
+24,"Artigo 22.º, n.º 1, alínea a) do Código dos Contratos Públicos",259,,
+25,"Artigo 20.º, n.º 1, alínea c) do Código dos Contratos Públicos e artigo 4.º, nº 1 do DLR nº 34/2008/M, de 14.08 (DLR n.º 6/2018/M)",259,,
+26,"Artigo 7.º, n.º 1, da Lei n.º 30/2021, de 21.05",258,,
+27,"Artigo 19.º, alínea d) do Código dos Contratos Públicos e artigo 4.º, nº 1 do DLR nº 34/2008/M, de 14.08",259,,
+28,"Artigo 20.º, n.º 1, alínea d) do Código dos Contratos Públicos e artigo 4.º, nº 1 do DLR nº 34/2008/M, de 14.08",20,1,c
+29,"Artigo 2.º, alínea b), da Lei n.º 30/2021, de 21.05",20,1,c
+30,"Artigo 265.º, n.º1 do Código dos Contratos Públicos",,,
+31,"Artigo 32.º, n.º 2 do Código dos Contratos Públicos",20,1,d
+32,"Artigo 21.º, n.º 1, alínea b) do Código dos Contratos Públicos",20,1,c
+33,"Artigo 24.º, n.º 1, alínea a) do CCP versão D.L.n.º 78/2022",20,1,d
+34,"Artigo 27.º, n.º 1, alínea i) do Código dos Contratos Públicos",20,1,c
+35,"Artigo 25.º, n.º 1, alínea c) do Código dos Contratos Públicos",20,1,d
+36,"Artigo 24.º, n.º 6 do Código dos Contratos Públicos",24,1,e
+37,"Artigo 19.º, alínea a) do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",20,1,d
+38,"Artigo 33.º, n.º 1 do Código dos Contratos Públicos",20,1,d
+39,"Artigo 19.º, alínea b) do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",20,1,b
+40,"Artigo 24.º, n.º 1, alínea b) do Código dos Contratos Públicos",20,1,c
+41,"Artigo 24.º, n.º 1, alínea b) do CCP versão D.L.n.º 78/2022",259,,
+42,Artigo 11º do Código dos Contratos Públicos,20,1,c
+43,artigo 6.º-A n.º 1 do Código dos Contratos Públicos,20,1,a
+44,"Artigo 24.º, n.º 5 do Código dos Contratos Públicos",259,,
+45,"Artigo 24.º, n.º 3, do Código dos Contratos Públicos",19,,c
+46,"Artigo 27.º, n.º 1, alínea h) do Código dos Contratos Públicos",26,1,e
+47,"Artigo 24.º, n.º 1, alínea a) do Código dos Contratos Públicos",20,1,c
+48,"Artigo 20.º, alínea b) do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",20,1,d
+49,"Artigo 6.º e artigo 2.º, alínea a), da Lei n.º 30/2021, de 21.05",20,1,c
+50,"Artigo 26.º, n.º 1, alínea c) do Código dos Contratos Públicos",19,,a
+51,"Artigo 252.º, n.º 1, alínea b) do Código dos Contratos Públicos",20,1,d
+52,"Artigo 26.º, n.º 2, alínea b) do Código dos Contratos Públicos",259,,
+53,"Artigo 21.º, alínea a) do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",20,1,c
+54,"Artigo 21.º, n.º 2 do Código dos Contratos Públicos",20,1,c
+55,"Artigo 24.º, n.º 1, alínea d) do Código dos Contratos Públicos",19,,c
+56,"Artigo 155.º, alínea b) do Código dos Contratos Públicos",20,1,c
+57,"Artigo 24.º, n.º 6, alínea a) do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",259,,
+58,"Artigo 22.º, n.º 1, alínea b) do Código dos Contratos Públicos",20,1,a
+59,"Artigo 24.º, n.º 8 do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",20,1,b
+60,"Artigo 21.º, n.º 1, alínea a) do Código dos Contratos Públicos",259,,
+61,"artigo 3.º n.º 1 do DLn.º 60/2018, de 03.08",20,1,c
+62,"Artigo 3.º, n.º 1, alínea b) do DL nº 30/2018, de 07.05",24,1,e
+63,"Artigo 27.º, n.º 1, alínea e) do Código dos Contratos Públicos",259,,
+64,"Artigo 26.º, n.º 1, alínea b) do Código dos Contratos Públicos",20,27,a
+65,"Artigo 26.º, n.º 1, alínea d) do Código dos Contratos Públicos",20,1,b
+66,"Artigo 3.º, n.º 1, do DLn.º 60/2018, de 03.08",24,1,e
+67,"Artigo 3.º e artigo 2.º, alínea b), da Lei n.º 30/2021, de 21.05",24,1,e
+68,Artigo 27.º-A do Código dos Contratos Públicos,259,,
+69,"Artigo 27.º, n.º 1, alínea d) do Código dos Contratos Públicos",259,,
+70,"Artigo 155.º, alínea a) do Código dos Contratos Públicos",20,1,c
+71,"Artigo 27.º, n.º 1, alínea g) do Código dos Contratos Públicos",24,1,e
+72,"Artigo 9.º, do Decreto-Lei n.º 54/2023, de 14 de julho",20,1,d
+73,artigo 5.º n.º 4 a) do Código dos Contratos Públicos,20,1,d
+74,"Artigo 31.º, n.º 4 do Código dos Contratos Públicos e artigo 4.º, nº 1 do DLR nº 34/2008/M, de 14.08",20,1,c
+75,artigo 5.º n.º 1 do Código dos Contratos Públicos,21,1,c
+76,"Artigo 24.º, n.º 1, alínea e) do Código dos Contratos Públicos",27,1,b
+77,"Artigo 31.º, n.º 1 do Código dos Contratos Públicos",20,1,d
+78,"Artigo 24.º, n.º 6, alínea b) do Decreto Legislativo Regional n.º 27/2015/A, de 29.12",20,1,d
+79,"Artigo 4.º e artigo 2.º, alínea b), da Lei n.º 30/2021, de 21.05",24,1,e
+80,"Artigo 3.º e artigo 2.º, alínea a), da Lei n.º 30/2021, de 21.05",20,1,c
+81,Artigo 241.º - B do Código dos Contratos Públicos,19,,a
+82,artigo 5.º n.º 4 c) do Código dos Contratos Públicos,,,
+83,"Artigo 1.1 da Portaria n.º 766/84, de 27.09",19,,d
+84,"Artigo 27.º, n.º 1, alínea c) do Código dos Contratos Públicos",259,,
+85,"Artigo 6.º e artigo 2.º, alínea b), da Lei n.º 30/2021, de 21.05",20,27,a
+86,"Artigo 32.º, n.º 3 do Código dos Contratos Públicos",20,1,a
+87,"Artigo 26.º, n.º 1, alínea f) do Código dos Contratos Públicos",20,1,b
+88,"Artigo 19.º, alínea c) do Código dos Contratos Públicos e artigo 4.º, nº 1 do DLR nº 34/2008/M, de 14.08 (DLR n.º 6/2018/M)",20,1,d
+89,"Artigo 31.º, n.º 2 do Código dos Contratos Públicos",20,1,d
+90,"Artigo 24.º, n.º 4 do Código dos Contratos Públicos",20,1,a
+91,"Artigo 2º, n.º 1 do DL . nº 10-A/2020, de 13.03",20,1,c

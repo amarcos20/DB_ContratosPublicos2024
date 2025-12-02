@@ -1,0 +1,63 @@
+table TIPO_CONTRATO (
+    _ID_TIPO_CONTRATO_ int,
+    TIPO_CONTRATO varchar,
+    TIPOCONTRATO varchar
+)
+
+table FUNDAMENTACAO (
+    _ID_FUNDAMENTO_ int,
+    ARTIGO varchar,
+    NUMERO? int,
+    DETALHEFUNDAMENTACAO? text,
+    ALINEA? varchar
+)
+
+table TIPO_PROCEDIMENTO (
+    _ID_TIPO_PROCEDIMENTO_ int,
+    PROCEDIMENTO varchar,
+    TIPOPROCEDIMENTO varchar
+)
+
+table ACORDO (
+    _ID_ACORDO_ int,
+    DESCRACORDOQUADRO? text
+)
+
+table LOCAL_EXECUCAO (
+    _ID_LOCAL_ int,
+    PAIS varchar,
+    LOCALEXECUCAO varchar,
+    DISTRITO? varchar,
+    CONCELHO? varchar
+)
+
+table CPV (
+    _ID_CPV_ int,
+    CPV varchar,
+    CODIGO_CPV varchar,
+    DESCRICAO? text
+)
+
+table ENTIDADES (
+    _ID_ENTIDADE_ int,
+    NIF varchar,
+    NOME varchar
+)
+
+table CONTRATOS (
+    _ID_CONTRATO_ varchar,
+    DATACELEBRACAOCONTRATO date,
+    DATAPUBLICACAOCONTRATO date,
+    PRAZOEXECUCAO varchar,
+    PRECOCONTRATUAL float,
+    OBJECTOCONTRATO text,
+    PROCEDIMENTOCENTRALIZADO? boolean,
+    ID_TIPO_CONTRATO --> TIPO_CONTRATO.ID_TIPO_CONTRATO,
+    ID_FUNDAMENTO  --> FUNDAMENTACAO.ID_FUNDAMENTO,
+    ID_TIPO_PROCEDIMENTO --> TIPO_PROCEDIMENTO.ID_TIPO_PROCEDIMENTO,
+    ID_ACORDO --> ACORDO.ID_ACORDO,
+    ID_LOCAL  --> LOCAL_EXECUCAO.ID_LOCAL,
+    ID_CPV  --> CPV.ID_CPV,
+    ID_ADJUDICANTE  --> ENTIDADES.ID_ENTIDADE,
+    ID_ADJUDICATARIO  --> ENTIDADES.ID_ENTIDADE
+)
