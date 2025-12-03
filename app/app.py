@@ -1,7 +1,6 @@
 import warnings
 # Suprime avisos futuros (como o que está na primeira linha do seu código original)
 warnings.filterwarnings("ignore", category=FutureWarning) 
-
 from flask import render_template, Flask, request
 import logging
 import db # Importa as funções execute/fetchone do db.py
@@ -157,6 +156,7 @@ def table_detail(table_name):
                            columns=columns, 
                            data=data, 
                            fields=schema['fields'])
+
 @APP.route('/consultas')
 @APP.route('/queries')
 def lista_consultas():
@@ -401,3 +401,156 @@ ORDER BY
                             titulo="Query 12: preço médio de contrato para cada tipo de procedimento, útil para identificar quais procedimentos tendem a ser mais caros", 
                             colunas=['TIPO_PROCEDIMENTO', 'TotalContratos', 'PrecoMedioContrato'], 
                             resultados=resultados)
+# No seu app.py
+
+QUERY_TITLES = {
+    'query_1': "Contagem e Valor Total/Médio dos Contratos",
+    'query_2': "Contrato com o Valor Máximo",
+    'query_3': "Contagem de Contratos por Distrito",
+    'query_4': "Top 5 Tipos de Contrato",
+    'query_5': "Contagem por Tipo de Procedimento",
+    'query_6': "Top 10 Códigos CPV (Descrição)",
+    'query_7': "Prazo Médio de Execução por Tipo de Contrato (Dias)",
+    'query_8': "Top 10 Adjudicantes por Valor",
+    'query_9': "Pesquisa por Objeto (Requer Parâmetro 'termo')",
+    'query_10': "Entidades Registadas sem NIF",
+    'query_11': "Valor Total de Contratos por Distrito (Top 10)",
+    'query_12': "Preço Médio de Contrato por Tipo de Procedimento"
+}
+SQL_QUERIES = {
+    'query_1': """
+        SELECT
+            COUNT(idcontrato) AS ContagemTotal,
+            ROUND(SUM(precoContratual), 2) AS ValorTotal,
+            ROUND(AVG(precoContratual), 2) AS ValorMedio
+        FROM CONTRATOS
+    """,
+    'query_2': """
+        SELECT
+            idcontrato, objectoContrato, precoContratual
+        FROM CONTRATOS
+        ORDER BY precoContratual DESC
+        LIMIT 1
+    """,
+    'query_3': """
+        SELECT
+            L.DISTRITO, COUNT(C.idcontrato) AS NumContratos
+        FROM CONTRATOS C
+        JOIN LOCAL L ON C.localExecucao = L.ID_LOCAL
+        WHERE L.DISTRITO IS NOT NULL
+        GROUP BY L.DISTRITO
+        ORDER BY NumContratos DESC
+    """,
+    'query_4': """
+        SELECT
+            TT.TIPO_CONTRATO, COUNT(C.idcontrato) AS NumContratos
+        FROM CONTRATOS C
+        JOIN TIPO_CONTRATO TT ON C.tipocontrato = TT.ID_TIPO_CONTRATO
+        GROUP BY TT.TIPO_CONTRATO
+        ORDER BY NumContratos DESC
+        LIMIT 5
+    """,
+    'query_5': """
+        SELECT
+            TP.TIPO_PROCEDIMENTO, COUNT(C.idcontrato) AS NumContratos
+        FROM CONTRATOS C
+        JOIN TIPO_PROCEDIMENTO TP ON C.tipoprocedimento = TP.ID_TIPO_PROCEDIMENTO
+        GROUP BY TP.TIPO_PROCEDIMENTO
+        ORDER BY NumContratos DESC
+    """,
+    'query_6': """
+        SELECT
+            P.DESCRICAO, P.CODIGO_CPV, COUNT(C.idcontrato) AS NumContratos
+        FROM CONTRATOS C
+        JOIN CPV P ON C.cpv = P.ID_CPV
+        GROUP BY P.DESCRICAO, P.CODIGO_CPV
+        ORDER BY NumContratos DESC
+        LIMIT 10
+    """,
+    'query_7': """
+        -- Código corrigido para calcular a média (AVG)
+        SELECT
+            TT.TIPO_CONTRATO,
+            ROUND(AVG(C.prazoExecucao), 2) AS PrazoMedioDias,
+            COUNT(C.idcontrato) AS NumContratosValidos
+        FROM CONTRATOS C
+        JOIN TIPO_CONTRATO TT ON C.tipocontrato = TT.ID_TIPO_CONTRATO
+        WHERE C.prazoExecucao IS NOT NULL AND C.prazoExecucao > 0
+        GROUP BY TT.TIPO_CONTRATO
+        ORDER BY PrazoMedioDias DESC
+    """,
+    'query_8': """
+        SELECT
+            E.NOME AS NomeAdjudicante,
+            E.NIF,
+            ROUND(SUM(C.precoContratual), 2) AS ValorTotalContratado
+        FROM CONTRATOS C
+        JOIN ENTIDADES E ON C.adjudicante = E.ID_ENTIDADE
+        WHERE C.adjudicante IS NOT NULL
+        GROUP BY E.NOME, E.NIF
+        ORDER BY ValorTotalContratado DESC
+        LIMIT 10
+    """,
+    'query_9': """
+        -- Esta query usa um parâmetro de pesquisa (objectocontrato LIKE ?)
+        SELECT
+            idcontrato, objectocontrato, precoContratual
+        FROM CONTRATOS
+        WHERE objectocontrato LIKE ?
+        LIMIT 20
+    """,
+    'query_10': """
+        SELECT
+            ID_ENTIDADE, NOME
+        FROM ENTIDADES
+        WHERE NIF IS NULL OR NIF = 'RGPD'
+        LIMIT 10
+    """,
+    'query_11': """
+        SELECT
+            LE.DISTRITO,
+            COUNT(C.IDCONTRATO) AS TotalContratos,
+            SUM(C.PRECOCONTRATUAL) AS ValorTotalContratado
+        FROM
+            CONTRATOS C
+        JOIN
+            LOCAL LE ON C.localExecucao = LE.ID_LOCAL
+        WHERE
+            LE.DISTRITO IS NOT NULL
+        GROUP BY
+            LE.DISTRITO
+        ORDER BY
+            ValorTotalContratado DESC
+        LIMIT 10;
+    """,
+    'query_12': """
+        SELECT
+            TP.TIPO_PROCEDIMENTO,
+            COUNT(C.IDCONTRATO) AS TotalContratos,
+            ROUND(AVG(C.PRECOCONTRATUAL), 2) AS PrecoMedioContrato
+        FROM
+            CONTRATOS C
+        JOIN
+            TIPO_PROCEDIMENTO TP ON C.tipoprocedimento = TP.ID_TIPO_PROCEDIMENTO
+        GROUP BY
+            TP.TIPO_PROCEDIMENTO
+        HAVING
+            COUNT(C.IDCONTRATO) >= 50
+        ORDER BY
+            PrecoMedioContrato DESC;
+    """
+}
+@APP.route('/queries/code/<string:query_id>')
+def exibir_codigo_sql(query_id):
+    """
+    Função que busca o código SQL no dicionário e o exibe no template.
+    """
+    if query_id in SQL_QUERIES:
+        sql_code = SQL_QUERIES[query_id]
+        # Use a variável do nome que definiu no seu app (APP ou app)
+        title = QUERY_TITLES.get(query_id, f"Código SQL para {query_id}")
+        return render_template(
+            'exibir_codigo.html', 
+            title=title,
+            sql_code=sql_code
+        )

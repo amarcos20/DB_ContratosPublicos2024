@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Código SQL: {{ title }}{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <a href="/">Início</a> &gt; <a href="/listar_consultas">Consultas</a> &gt; Código
+</div>
+{% endblock %}
+
+{% block content %}
+    <h2 class="dashboard-title">Código SQL: {{ title }}</h2>
+
+    <p style="margin-bottom: 20px; color: var(--text-medium);">
+        Abaixo está o código SQL executado para a consulta "<strong>{{ title }}</strong>".
+    </p>
+
+    <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; overflow-x: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <pre style="margin: 0; color: #000000; font-family: 'Consolas', 'Monaco', monospace; font-size: 14px; line-height: 1.5; white-space: pre-wrap;">
+            <code>{{ sql_code }}</code>
+        </pre>
+    </div>
+    
+    <p style="margin-top: 30px;">
+        <a href="/consultas" class="button-link" style="background-color: #905a23; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none;">
+            ← Voltar à Lista de Consultas
+        </a>
+    </p>
+    
+{% endblock %}

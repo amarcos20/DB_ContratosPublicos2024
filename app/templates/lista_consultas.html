@@ -12,24 +12,90 @@
     <h2 class="dashboard-title">Lista de Consultas (Queries) </h2>
     
     <p style="margin-bottom: 35px; color: var(--text-medium);">
-        Selecione uma das consultas abaixo para executar o relatório e ver os resultados detalhados.
+        Selecione uma das consultas abaixo para executar o relatório e ver os resultados detalhados, ou clique em "Ver Código" para visualizar o SQL.
     </p>
 
-    <!-- Lista que corresponde às 10 queries implementadas no app.py -->
-    <ul>
-        <li><a href="/queries/query_1">Query 1: Contagem e Valor Total/Médio dos Contratos</a></li>
-        <li><a href="/queries/query_2">Query 2: Contrato com o Valor Máximo</a></li>
-        <li><a href="/queries/query_3">Query 3: Contagem de Contratos por Distrito</a></li>
-        <li><a href="/queries/query_4">Query 4: Top 5 Tipos de Contrato</a></li>
-        <li><a href="/queries/query_5">Query 5: Contagem por Tipo de Procedimento</a></li>
-        <li><a href="/queries/query_6">Query 6: Top 10 Códigos CPV (Descrição)</a></li>
-        <li><a href="/queries/query_7">Query 7: Prazo Médio de Execução por Tipo de Contrato (Dias)</a></li>
-        <li><a href="/queries/query_8">Query 8: Top 10 Adjudicantes por Valor</a></li>
-        <li><a href="/queries/query_9">Query 9: Pesquisa por Objeto (Requer Parâmetro 'termo')</a></li>
-        <li><a href="/queries/query_10">Query 10: Entidades Registadas sem NIF</a></li>
-        <li><a href="/queries/query_11">Query 11: valor total de todos os contratos em cada distrito e lista os 10 distritos com o maior valor total</a></li>
-        <li><a href="/queries/query_12">Query 12: preço médio de contrato para cada tipo de procedimento, útil para identificar quais procedimentos tendem a ser mais caros</a></li>
-    </ul>
+    <style>
+        .query-item {
+            display: flex;
+            justify-content: space-between; /* Alinha links à esquerda e botões à direita */
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .query-item:last-child {
+            border-bottom: none;
+        }
+        .query-name a {
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--text-dark, #333);
+        }
+        .code-button {
+            font-size: 0.9em;
+            color: white;
+            background-color: #712d1c; /* Cor principal, estilo botão */
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+        .code-button:hover {
+            background-color: #712d1c;
+        }
+    </style>
+
+    <div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_1">Query 1: Contagem e Valor Total/Médio dos Contratos</a></span>
+            <a href="/queries/code/query_1" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_2">Query 2: Contrato com o Valor Máximo</a></span>
+            <a href="/queries/code/query_2" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_3">Query 3: Contagem de Contratos por Distrito</a></span>
+            <a href="/queries/code/query_3" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_4">Query 4: Top 5 Tipos de Contrato</a></span>
+            <a href="/queries/code/query_4" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_5">Query 5: Contagem por Tipo de Procedimento</a></span>
+            <a href="/queries/code/query_5" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_6">Query 6: Top 10 Códigos CPV (Descrição)</a></span>
+            <a href="/queries/code/query_6" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_7">Query 7: Prazo Médio de Execução por Tipo de Contrato (Dias)</a></span>
+            <a href="/queries/code/query_7" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_8">Query 8: Top 10 Adjudicantes por Valor</a></span>
+            <a href="/queries/code/query_8" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_9">Query 9: Pesquisa por Objeto (Requer Parâmetro 'termo')</a></span>
+            <a href="/queries/code/query_9" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_10">Query 10: Entidades Registadas sem NIF</a></span>
+            <a href="/queries/code/query_10" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_11">Query 11: valor total de todos os contratos em cada distrito e lista os 10 distritos com o maior valor total</a></span>
+            <a href="/queries/code/query_11" class="code-button">Ver Código </a>
+        </div>
+        <div class="query-item">
+            <span class="query-name"><a href="/queries/query_12">Query 12: preço médio de contrato para cada tipo de procedimento, útil para identificar quais procedimentos tendem a ser mais caros</a></span>
+            <a href="/queries/code/query_12" class="code-button">Ver Código </a>
+        </div>
+    </div>
     
     <p style="margin-top: 35px; color: var(--text-medium); opacity: 0.8;">
     </p>
