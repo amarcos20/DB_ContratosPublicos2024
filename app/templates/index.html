@@ -1,34 +1,99 @@
 {% extends "base.html" %}
 
-{% block title %}Dashboard{% endblock %}
+{% block title %}Dashboard - Resumo{% endblock %}
 
 {% block content %}
-    <h2>Estatísticas Gerais (Resumo) 📋</h2>
+    <!-- 1. INTRODUÇÃO E DESCRIÇÃO DO SISTEMA -->
+    <div class="welcome-section" style="background-color: var(--cream); padding: 30px; border-radius: 8px; margin-bottom: 40px; box-shadow: 0 4px 8px var(--shadow);">
+        <h2 style="color: var(--brown-dark); border-bottom: none; margin-top: 0; padding-bottom: 0;">
+            Sistema de visualizacao dos CONTRATOS PUBLICOS 2024
+        </h2>
+        <p style="font-size: 1.1rem; color: var(--text-medium); line-height: 1.8;">
+            Esta plataforma foi desenvolvida no contexto da unidade curricular de **Base de Dados**, no ano letivo 2025/2026, com o objetivo de fornecer uma visão clara e detalhada dos dados de **Contratos Públicos**. A partir do ficheiro `ContratosPublicos2024.csv`, foi modelada uma base de dados que segue a **Terceira Forma Normal (3FN)** para garantir a integridade e a eficiência na consulta dos dados. Utilize o menu de navegação para aceder a relatórios estatísticos, análises detalhadas e à estrutura completa da base de dados.
+        </p>
+    </div>
+
+    <!-- 2. ESTATÍSTICAS GERAIS (Cards) -->
+    <h2 class="dashboard-title">Estatísticas Gerais </h2>
+    
     {% if stats %}
-        <p><strong>Total de Contratos Registados:</strong> {{ stats.n_contratos }}</p>
-        <p><strong>Valor Médio dos Contratos:</strong> € {{ stats.valor_medio_contrato }}</p>
-        <p><strong>Prazo Máximo de Execução:</strong> {{ stats.prazo_maximo }} dias</p>
+    <!-- Os estilos foram movidos para inline para garantir que funcionam com o seu style.css original -->
+    <div class="stats-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 25px;">
+        
+        <div class="stat-card" style="background-color: var(--white); padding: 25px 30px; border-radius: 8px; box-shadow: 0 4px 10px var(--shadow); border-top: 5px solid var(--brown-medium);">
+            <h3>Total de Contratos Registados</h3>
+            <p class="stat-value" style="color: var(--brown-dark); font-size: 2.2rem; font-weight: 700;">{{ stats.n_contratos }}</p>
+        </div>
+    </div>
     {% else %}
-        <p>Erro ao carregar estatísticas ou base de dados vazia.</p>
+        <p>⚠️ Erro ao carregar estatísticas ou base de dados vazia.</p>
     {% endif %}
 
     <hr>
-    <h2>Lista de Consultas (Queries)</h2>
-    <ul>
-        <li><a href="/queries/query_1">Query 1: Contagem e Valor Total/Médio dos Contratos</a></li>
-        <li><a href="/queries/query_2">Query 2: Pesquisa de Contratos por Entidade (Adjudicante/Adjudicatário)</a></li>
-        <li><a href="/queries/query_3">Query 3: Contratos por Ano de Celebração</a></li>
-        <li><a href="/queries/query_4">Query 4: Contrato com o Valor Máximo</a></li>
-        <li><a href="/queries/query_5">Query 5: Contagem de Contratos por Distrito</a></li>
-        <li><a href="/queries/query_6">Query 6: Top 5 Tipos de Contrato</a></li>
-        <li><a href="/queries/query_7">Query 7: Contagem por Tipo de Procedimento</a></li>
-        <li><a href="/queries/query_8">Query 8: Top 10 Códigos CPV (Descrição)</a></li>
-        <li><a href="/queries/query_9">Query 9: Contagem por Artigo de Fundamentação</a></li>
-        <li><a href="/queries/query_10">Query 10: Prazo Médio de Execução por Tipo de Contrato (Dias)</a></li>
-        <li><a href="/queries/query_11">Query 11: Top 10 Adjudicantes por Valor</a></li>
-        <li><a href="/queries/query_12">Query 12: Top 10 Adjudicatários por Número de Contratos</a></li>
-        <li><a href="/queries/query_13">Query 13: Pesquisa por Objeto (Requer Parâmetro 'termo')</a></li>
-        <li><a href="/queries/query_14">Query 14: Contratos Celebrados em Acordo-Quadro</a></li>
-        <li><a href="/queries/query_15">Query 15: Entidades Registadas sem NIF</a></li>
-    </ul>
+    
+    <!-- 3. LINKS RÁPIDOS E INFORMAÇÃO DE AUTORIA -->
+    <h2 class="dashboard-title">Navegação Rápida & Informação</h2>
+    
+    <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+        
+        <!-- Bloco de Links Rápidos -->
+        <div style="flex: 2; min-width: 300px;">
+            <h3 style="color: var(--brown-medium); margin-bottom: 15px; font-weight: 600;">Acesso Essencial</h3>
+            <ul>
+                <li style="border-left-color: var(--brown-accent); margin-bottom: 10px;"><a href="/consultas">Ver Todas as Consultas (Relatórios)</a></li>
+                <li style="border-left-color: var(--brown-accent); margin-bottom: 10px;"><a href="/queries/query_9">Pesquisa Rápida por Objeto</a></li>
+                <li style="border-left-color: var(--brown-accent); margin-bottom: 10px;"><a href="/t">Visualizar Estrutura da Base de Dados</a></li>
+                <li style="border-left-color: var(--brown-dark); margin-bottom: 10px;">
+                    <a href="https://github.com/amarcos20/DB_ContratosPublicos2024/" target="_blank">
+                        Código e Documentação (GitHub)
+                    </a>
+                    <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 3px;">
+                        Todo o código e documentação estão neste repositório.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Bloco de Autoria E Licenciatura (CORRIGIDO E ESTRUTURADO) -->
+        <div style="flex: 2; min-width: 300px; background-color: var(--cream-light); padding: 25px; border-radius: 6px; border: 1px solid var(--brown-accent);">
+            
+            <h3 style="color: var(--brown-dark); margin-bottom: 15px; font-weight: 700; font-size: 1.2rem;">
+                LICENCIATURA EM BIOINFORMÁTICA - ANO LETIVO 2025/2026
+            </h3>
+
+            <p style="font-size: 0.95rem; color: var(--text-medium); margin-bottom: 15px; border-top: 1px solid var(--brown-accent); padding-top: 10px;">
+                Este projeto de análise foi desenvolvido pelos seguintes alunos:
+            </p>
+            
+            <ul style="grid-template-columns: 1fr; margin-top: 10px; gap: 10px;">
+                <!-- Autor 1: Afonso Marcos (Com Link) -->
+                <li style="border-left: 3px solid var(--brown-medium); padding: 8px 15px;">
+                    <strong style="color: var(--text-dark);">Afonso Marcos</strong>
+                    <a href="https://www.linkedin.com/in/afonsomarcos20/" target="_blank" style="margin-left: 10px; opacity: 0.8;">
+                        <!-- SVG do LinkedIn -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </li>
+                
+                <!-- Autor 2: Artur Anselmo (Sem Link) -->
+                <li style="border-left: 3px solid var(--brown-medium); padding: 8px 15px;">
+                    <strong style="color: var(--text-dark);">Artur Anselmo</strong>
+                </li>
+
+                <!-- Autor 3: Artur Anselmo (Com Link) -->
+                <li style="border-left: 3px solid var(--brown-medium); padding: 8px 15px;">
+                    <strong style="color: var(--text-dark);">Pedro Afonso</strong>
+                    <a href="https://www.linkedin.com/in/pedro-afonso-282a43294/" target="_blank" style="margin-left: 10px; opacity: 0.8;">
+                        <!-- SVG do LinkedIn -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                </li>
+                
+                <!-- Autor 4: Marcos Torres (sem Link) -->
+                <li style="border-left: 3px solid var(--brown-medium); padding: 8px 15px;">
+                    <strong style="color: var(--text-dark);">Marcos Torres</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}

@@ -6,6 +6,81 @@ from flask import render_template, Flask, request
 import logging
 import db # Importa as funções execute/fetchone do db.py
 
+TABLE_SCHEMA = {
+    'CONTRATOS': {
+        'fields': [
+            {'name': 'ID_CONTRATO', 'type': 'int', 'note': 'PK'},
+            {'name': 'DATACELEBRACAOCONTRATO', 'type': 'date', 'note': ''},
+            {'name': 'DATAPUBLICACAOCONTRATO', 'type': 'date', 'note': ''},
+            {'name': 'PRAZOEXECUCAO', 'type': 'varchar', 'note': ''},
+            {'name': 'PRECOCONTRATUAL', 'type': 'float', 'note': ''},
+            {'name': 'OBJECTOCONTRATO', 'type': 'text', 'note': ''},
+            {'name': 'PROCEDIMENTOCENTRALIZADO', 'type': 'boolean', 'note': 'Opcional (?)'},
+            {'name': 'ID_TIPO_CONTRATO', 'type': 'int', 'note': 'FK'},
+            {'name': 'ID_FUNDAMENTO', 'type': 'int', 'note': 'FK'},
+            {'name': 'ID_TIPO_PROCEDIMENTO', 'type': 'int', 'note': 'FK'},
+            {'name': 'ID_ACORDO', 'type': 'int', 'note': 'FK'},
+            {'name': 'ID_LOCAL', 'type': 'int', 'note': 'FK'},
+            {'name': 'ID_CPV', 'type': 'int', 'note': 'FK'},
+            {'name': 'ID_ADJUDICANTE', 'type': 'int', 'note': 'FK'},
+            {'name': 'ID_ADJUDICATARIO', 'type': 'int', 'note': 'FK'},
+        ]
+    },
+    'ENTIDADES': {
+        'fields': [
+            {'name': 'ID_ENTIDADE', 'type': 'int', 'note': 'PK'},
+            {'name': 'NIF', 'type': 'varchar', 'note': ''},
+            {'name': 'NOME', 'type': 'varchar', 'note': ''},
+        ]
+    },
+    'TIPO_CONTRATO': {
+        'fields': [
+            {'name': 'ID_TIPO_CONTRATO', 'type': 'int', 'note': 'PK'}, 
+            {'name': 'TIPO_CONTRATO', 'type': 'varchar', 'note': ''}, 
+            {'name': 'TIPOCONTRATO', 'type': 'varchar', 'note': ''}
+        ]
+    },
+    'FUNDAMENTACAO': {
+        'fields': [
+            {'name': 'ID_FUNDAMENTO', 'type': 'int', 'note': 'PK'}, 
+            {'name': 'ARTIGO', 'type': 'varchar', 'note': ''}, 
+            {'name': 'NUMERO', 'type': 'int', 'note': 'Opcional (?)'}, 
+            {'name': 'DETALHEFUNDAMENTACAO', 'type': 'text', 'note': 'Opcional (?)'},
+            {'name': 'ALINEA', 'type': 'varchar', 'note': 'Opcional (?)'},
+        ]
+    },
+    'TIPO_PROCEDIMENTO': {
+        'fields': [
+            {'name': 'ID_TIPO_PROCEDIMENTO', 'type': 'int', 'note': 'PK'}, 
+            {'name': 'PROCEDIMENTO', 'type': 'varchar', 'note': ''}, 
+            {'name': 'TIPOPROCEDIMENTO', 'type': 'varchar', 'note': ''}
+        ]
+    },
+    'ACORDO': {
+        'fields': [
+            {'name': 'ID_ACORDO', 'type': 'int', 'note': 'PK'}, 
+            {'name': 'DESCRACORDOQUADRO', 'type': 'text', 'note': 'Opcional (?)'}
+        ]
+    },
+    'LOCAL_EXECUCAO': {
+        'fields': [
+            {'name': 'ID_LOCAL', 'type': 'int', 'note': 'PK'}, 
+            {'name': 'PAIS', 'type': 'varchar', 'note': ''}, 
+            {'name': 'LOCALEXECUCAO', 'type': 'varchar', 'note': ''}, 
+            {'name': 'DISTRITO', 'type': 'varchar', 'note': 'Opcional (?)'}, 
+            {'name': 'CONCELHO', 'type': 'varchar', 'note': 'Opcional (?)'}
+        ]
+    },
+    'CPV': {
+        'fields': [
+            {'name': 'ID_CPV', 'type': 'int', 'note': 'PK'}, 
+            {'name': 'CPV', 'type': 'varchar', 'note': ''}, 
+            {'name': 'CODIGO_CPV', 'type': 'varchar', 'note': ''}, 
+            {'name': 'DESCRICAO', 'type': 'text', 'note': 'Opcional (?)'}
+        ]
+    },
+}
+
 # 1. Configuração e Inicialização do Flask
 # Configura o logger para mostrar informações na consola
 logging.basicConfig(level=logging.INFO) 
@@ -20,15 +95,80 @@ def get_dict_result(query, args=None):
     return dict(result_row) if result_row else None
 
 # --- ROTAS BASE E QUERIES ---
+def get_dict_result(query, args=None):
+    """Executa fetchone e converte o resultado do sqlite3.Row em dict (assumindo db.fetchone devolve sqlite3.Row)."""
+    # ❗ No código real, esta função deve usar db.fetchone
+    result_row = db.fetchone(query, args)
+    return dict(result_row) if result_row else None
 
+# --- ROTAS BASE E QUERIES ---
+
+@APP.route('/t')
+def tabelas():
+    """Rota de índice das tabelas."""
+    # Prepara a lista de tabelas para o template tabelas.html
+    table_list = [
+        # Filtra apenas por PK e FK para a descrição na listagem
+        {'name': name.upper(), 'fields': [f['name'] for f in data['fields'] if f.get('note') == 'PK' or f.get('note') == 'FK']}
+        for name, data in TABLE_SCHEMA.items()
+    ]
+    return render_template('tabelas.html', tables=table_list)
+
+@APP.route('/t/<table_name>')
+def table_detail(table_name):
+    """Rota de detalhe de uma tabela específica com as 5 primeiras linhas."""
+    upper_name = table_name.upper()
+    
+    # 1. Obter a estrutura da tabela
+    schema = TABLE_SCHEMA.get(upper_name)
+    if not schema:
+        return render_template('tabela_detalhe.html', table_name=upper_name, columns=[], data=[], fields=[])
+
+    # 2. Obter as 5 primeiras linhas da base de dados
+    columns = []
+    data = []
+    
+    try:
+        # ❗ QUERY SQL SIMPLES SEM MOCK DATA
+        query = f'SELECT * FROM {upper_name} LIMIT 5'
+        rows = db.execute(query) # Assume db.execute devolve uma lista de sqlite3.Row ou tuplos
+        
+        if rows:
+            # Assume que a primeira linha (se não for sqlite3.Row) tem atributos de keys para colunas
+            # Se db.execute devolve sqlite3.Row, pode-se usar rows[0].keys()
+            # Se db.execute devolve tuplos, deve usar os nomes do schema ou ajustar db.execute
+            
+            # Tentativa de obter colunas (Ajuste se o seu db.execute for diferente)
+            try:
+                # Se db.execute devolve sqlite3.Row (dicionário-like)
+                columns = list(rows[0].keys())
+            except AttributeError:
+                # Se db.execute devolve apenas tuplos, usamos as colunas do SCHEMA
+                columns = [f['name'] for f in schema['fields']]
+
+            data = [list(row) for row in rows] # Converte para lista de listas para o Jinja
+
+    except Exception as e:
+        logging.error(f"Erro inesperado ao consultar a tabela {upper_name}: {e}")
+        pass
+
+    return render_template('tabela_detalhe.html', 
+                           table_name=upper_name, 
+                           columns=columns, 
+                           data=data, 
+                           fields=schema['fields'])
+@APP.route('/consultas')
+@APP.route('/queries')
+def lista_consultas():
+    """Rota para exibir a lista de todas as consultas disponíveis."""
+    # Não precisa de passar dados, pois a lista de links está no HTML
+    return render_template('lista_consultas.html')
 @APP.route('/')
 def index():
     """Rota principal (Dashboard)."""
     stats = db.fetchone('''
         SELECT 
-            COUNT(idcontrato) AS n_contratos, 
-            ROUND(AVG(precoContratual), 2) AS valor_medio_contrato,
-            MAX(prazoExecucao) AS prazo_maximo
+            COUNT(idcontrato) AS n_contratos 
         FROM CONTRATOS
     ''')
     
@@ -40,7 +180,7 @@ def index():
 # NO FICHEIRO app.py, NA ROTA query_1
 @APP.route('/queries/query_1')
 def query_1():
-    """Q1 & Q2: Contagem Total e Valor Total/Médio dos Contratos"""
+    """Q1: Contagem Total e Valor Total/Médio dos Contratos"""
     resultados_row = db.fetchone('''
         SELECT 
             COUNT(idcontrato) AS ContagemTotal,
@@ -55,69 +195,9 @@ def query_1():
                             titulo="Query 1: Contagem e Valor Total/Médio dos Contratos", 
                             resultado=resultados)
 
-@APP.route('/queries/query_2', methods=['GET'])
-def query_2_entidade():
-    """Q2: Pesquisa de Contratos por Entidade (Adjudicante/Adjudicatário)"""
-    
-    # 1. Obter todas as entidades para o dropdown
-    entidades = db.execute('''
-        SELECT ID_ENTIDADE, NOME FROM ENTIDADES ORDER BY NOME
-    ''')
-    
-    # 2. Obter os filtros do utilizador
-    entidade_id = request.args.get('entidade_id')
-    tipo_entidade = request.args.get('tipo', 'adjudicante') # Default é adjudicante
-    
-    resultados = []
-    entidade_nome = ""
-    
-    if entidade_id:
-        # A coluna de JOIN muda dinamicamente
-        join_col = 'C.adjudicante' if tipo_entidade == 'adjudicante' else 'C.adjudicatario'
-        
-        # Obter o nome da entidade selecionada
-        entidade_nome_row = db.fetchone("SELECT NOME FROM ENTIDADES WHERE ID_ENTIDADE = ?", [entidade_id])
-        entidade_nome = entidade_nome_row['NOME'] if entidade_nome_row else "Desconhecida"
-
-        # Executar a query filtrada
-        resultados = db.execute(f'''
-            SELECT 
-                idcontrato, objectocontrato, precoContratual, dataCelebracaoContrato
-            FROM CONTRATOS C
-            WHERE {join_col} = ?
-            LIMIT 20
-        ''', [entidade_id])
-
-    return render_template('resultado_pesquisa_entidade.html', 
-                           titulo="Query 2: Pesquisa de Contratos por Entidade",
-                           entidades=entidades,
-                           selecionado_id=entidade_id,
-                           selecionado_nome=entidade_nome,
-                           tipo_entidade=tipo_entidade,
-                           resultados=resultados,
-                           colunas=['ID Contrato', 'Objeto', 'Preço', 'Data Celebração'])
-
-@APP.route('/queries/query_3')
-def query_3():
-    """Q3: Contratos por Ano (Data da Celebração)"""
-    resultados = db.execute('''
-        SELECT 
-            STRFTIME('%Y', DataCelebracaoContrato) AS Ano,
-            COUNT(idcontrato) AS NumContratos
-        FROM CONTRATOS
-        WHERE DataCelebracaoContrato IS NOT NULL  
-        GROUP BY Ano
-        ORDER BY Ano DESC
-    ''')
-    # ...
-    return render_template('resultado_tabela.html', 
-                            titulo="Query 3: Contratos por Ano de Celebração", 
-                            colunas=['Ano', 'NumContratos'], 
-                            resultados=resultados)
-
-@APP.route('/queries/query_4')
-def query_4():
-    """Q4: Contrato com Valor Máximo (Detalhe do Contrato)"""
+@APP.route('/queries/query_2')
+def query_2():
+    """Q2: Contrato com Valor Máximo (Detalhe do Contrato)"""
     resultados = get_dict_result('''
         SELECT 
             idcontrato, objectoContrato, precoContratual
@@ -126,12 +206,12 @@ def query_4():
         LIMIT 1
     ''')
     return render_template('resultado_agregacao.html', 
-                            titulo="Query 4: Contrato com o Valor Máximo", 
+                            titulo="Query 2: Contrato com o Valor Máximo", 
                             resultado=resultados)
 
-@APP.route('/queries/query_5')
-def query_5():
-    """Q5: Contagem por Distrito de Execução"""
+@APP.route('/queries/query_3')
+def query_3():
+    """Q3: Contagem por Distrito de Execução"""
     resultados = db.execute('''
         SELECT 
             L.DISTRITO, COUNT(C.idcontrato) AS NumContratos
@@ -142,15 +222,15 @@ def query_5():
         ORDER BY NumContratos DESC
     ''')
     return render_template('resultado_tabela.html', 
-                            titulo="Query 5: Contagem de Contratos por Distrito", 
+                            titulo="Query 3: Contagem de Contratos por Distrito", 
                             colunas=['DISTRITO', 'NumContratos'], 
                             resultados=resultados)
 
 # --- 2. Queries de Classificação e Agrupamento (Q6 a Q10) ---
 
-@APP.route('/queries/query_6')
-def query_6():
-    """Q6: Top 5 Tipos de Contrato"""
+@APP.route('/queries/query_4')
+def query_4():
+    """Q4: Top 5 Tipos de Contrato"""
     resultados = db.execute('''
         SELECT 
             TT.TIPO_CONTRATO, COUNT(C.idcontrato) AS NumContratos
@@ -161,13 +241,13 @@ def query_6():
         LIMIT 5
     ''')
     return render_template('resultado_tabela.html', 
-                            titulo="Query 6: Top 5 Tipos de Contrato", 
+                            titulo="Query 4: Top 5 Tipos de Contrato", 
                             colunas=['Tipo Contrato', 'NumContratos'], 
                             resultados=resultados)
 
-@APP.route('/queries/query_7')
-def query_7():
-    """Q7: Contagem por Tipo de Procedimento"""
+@APP.route('/queries/query_5')
+def query_5():
+    """Q5: Contagem por Tipo de Procedimento"""
     resultados = db.execute('''
         SELECT 
             TP.TIPO_PROCEDIMENTO, COUNT(C.idcontrato) AS NumContratos
@@ -177,13 +257,13 @@ def query_7():
         ORDER BY NumContratos DESC
     ''')
     return render_template('resultado_tabela.html', 
-                            titulo="Query 7: Contagem por Tipo de Procedimento", 
+                            titulo="Query 5: Contagem por Tipo de Procedimento", 
                             colunas=['Procedimento', 'NumContratos'], 
                             resultados=resultados)
 
-@APP.route('/queries/query_8')
-def query_8():
-    """Q8: Top 10 CPV (Código de Classificação)"""
+@APP.route('/queries/query_6')
+def query_6():
+    """Q6: Top 10 CPV (Código de Classificação)"""
     resultados = db.execute('''
         SELECT 
             P.DESCRICAO, P.CODIGO_CPV, COUNT(C.idcontrato) AS NumContratos
@@ -194,34 +274,17 @@ def query_8():
         LIMIT 10
     ''')
     return render_template('resultado_tabela.html', 
-                            titulo="Query 8: Top 10 Códigos CPV (Descrição)", 
+                            titulo="Query 6: Top 10 Códigos CPV (Descrição)", 
                             colunas=['Descrição CPV', 'Código CPV', 'NumContratos'], 
                             resultados=resultados)
 
-@APP.route('/queries/query_9')
-def query_9():
-    """Q9: Contagem por Fundamento Legal (Artigo)"""
-    resultados = db.execute('''
-        SELECT 
-            F.ARTIGO, COUNT(C.idcontrato) AS NumContratos
-        FROM CONTRATOS C
-        JOIN FUNDAMENTO F ON C.fundamentacao = F.ID_FUNDAMENTO
-        WHERE F.ARTIGO IS NOT NULL
-        GROUP BY F.ARTIGO
-        ORDER BY NumContratos DESC
-    ''')
-    return render_template('resultado_tabela.html', 
-                            titulo="Query 9: Contagem por Artigo de Fundamentação", 
-                            colunas=['Artigo', 'NumContratos'], 
-                            resultados=resultados)
 
-@APP.route('/queries/query_10')
-def query_10():
-    """Q10: Duração Média (prazoExecucao) por Tipo de Contrato"""
+@APP.route('/queries/query_7')
+def query_7():
+    """Q7: Duração Média (prazoExecucao) por Tipo de Contrato"""
     resultados = db.execute('''
         SELECT 
             TT.TIPO_CONTRATO, 
-            ROUND(AVG(CAST(C.prazoExecucao AS REAL)), 2) AS PrazoMedioDias, -- ❗ Adicionado CAST e precisão 2
             COUNT(C.idcontrato) AS NumContratosValidos                     -- ❗ Adicionado Contagem
         FROM CONTRATOS C
         JOIN TIPO_CONTRATO TT ON C.tipocontrato = TT.ID_TIPO_CONTRATO
@@ -230,15 +293,15 @@ def query_10():
         ORDER BY PrazoMedioDias DESC
     ''')
     return render_template('resultado_tabela.html', 
-                            titulo="Query 10: Prazo Médio de Execução por Tipo de Contrato (Dias)", 
+                            titulo="Query 7: Prazo Médio de Execução por Tipo de Contrato (Dias)", 
                             colunas=['Tipo Contrato', 'Prazo Médio (dias)'], 
                             resultados=resultados)
 
 # --- 3. Queries de Entidades e Detalhes (Q11 a Q15) ---
 
-@APP.route('/queries/query_11')
-def query_11():
-    """Q11: Top 10 Adjudicantes por Valor Contratado"""
+@APP.route('/queries/query_8')
+def query_8():
+    """Q8: Top 10 Adjudicantes por Valor Contratado"""
     resultados = db.execute('''
         SELECT 
             E.NOME AS NomeAdjudicante, 
@@ -252,32 +315,13 @@ def query_11():
         LIMIT 10
     ''')
     return render_template('resultado_tabela.html', 
-                            titulo="Query 11: Top 10 Adjudicantes por Valor", 
+                            titulo="Query 8: Top 10 Adjudicantes por Valor", 
                             colunas=['Nome Adjudicante', 'NIF', 'Valor Contratado (€)'], 
                             resultados=resultados)
 
-@APP.route('/queries/query_12')
-def query_12():
-    """Q12: Top 10 Adjudicatários por Contagem de Contratos"""
-    resultados = db.execute('''
-        SELECT 
-            E.NOME AS NomeAdjudicatario, 
-            E.NIF, 
-            COUNT(C.idcontrato) AS NumContratos
-        FROM CONTRATOS C
-        JOIN ENTIDADES E ON C.Adjudicatarios = E.ID_ENTIDADE
-        GROUP BY E.NOME, E.NIF
-        ORDER BY NumContratos DESC
-        LIMIT 10
-    ''')
-    return render_template('resultado_tabela.html', 
-                            titulo="Query 12: Top 10 Adjudicatários por Número de Contratos", 
-                            colunas=['Nome Adjudicatário', 'NIF', 'Contratos Ganhos'], 
-                            resultados=resultados)
-
-@APP.route('/queries/query_13')
-def query_13():
-    """Q13: Pesquisa por Objeto (Input de Pesquisa)"""
+@APP.route('/queries/query_9')
+def query_9():
+    """Q9: Pesquisa por Objeto (Input de Pesquisa)"""
     termo = request.args.get('termo', 'Todos') 
     
     resultados = db.execute('''
@@ -289,39 +333,71 @@ def query_13():
     ''', [f'%{termo}%'])
 
     return render_template('resultado_pesquisa.html', 
-                            titulo=f"Query 13: Contratos com Objeto Contendo '{termo}'", 
+                            titulo=f"Query 9: Contratos com Objeto Contendo '{termo}'", 
                             colunas=['ID Contrato', 'Objeto', 'Preço'], 
                             resultados=resultados, 
                             termo_pesquisado=termo)
 
 
-@APP.route('/queries/query_14')
-def query_14():
-    """Q14: Contratos celebrados em Acordo-Quadro (AQ)"""
+
+@APP.route('/queries/query_10')
+def query_10():
+    """Q10: Entidades Registadas sem NIF (Validação de Dados)"""
     resultados = db.execute('''
         SELECT 
-            C.idcontrato, C.objectocontrato, A.DESC_ACORDO_QUADRO
-        FROM CONTRATOS C
-        JOIN ACORDO A ON C.DescrAcordoQuadro = A.ID_ACORDO  
-        LIMIT 20
-    ''')
-    return render_template('resultado_tabela.html', 
-                            titulo="Query 14: Contratos Celebrados em Acordo-Quadro", 
-                            colunas=['ID Contrato', 'Objeto', 'Descrição do Acordo-Quadro'], 
-                            resultados=resultados)
-
-
-@APP.route('/queries/query_15')
-def query_15():
-    """Q15: Entidades Registadas sem NIF (Validação de Dados)"""
-    resultados = db.execute('''
-        SELECT 
-            ID_ENTIDADE, NOME, NIF
+            ID_ENTIDADE, NOME
         FROM ENTIDADES
-        WHERE NIF IS NULL OR NIF = ''
+        WHERE NIF IS NULL OR NIF = 'RGPD'
         LIMIT 10
     ''')
     return render_template('resultado_tabela.html', 
-                            titulo="Query 15: Entidades Registadas sem NIF", 
+                            titulo="Query 10: Entidades Registadas sem NIF", 
                             colunas=['ID Entidade', 'Nome', 'NIF'], 
+                            resultados=resultados)
+@APP.route('/queries/query_11')
+def query_11():
+    """Q11: valor total de todos os contratos em cada distrito e lista os 10 distritos com o maior valor total."""
+    resultados = db.execute('''
+      SELECT
+    LE.DISTRITO,
+    COUNT(C.IDCONTRATO) AS TotalContratos,
+    SUM(C.PRECOCONTRATUAL) AS ValorTotalContratado
+FROM
+    CONTRATOS C
+JOIN
+    LOCAL LE ON C.localExecucao = LE.ID_LOCAL
+WHERE
+    LE.DISTRITO IS NOT NULL
+GROUP BY
+    LE.DISTRITO
+ORDER BY
+    ValorTotalContratado DESC
+LIMIT 10;
+    ''')
+    return render_template('resultado_tabela.html', 
+                            titulo="Query 11: valor total de todos os contratos em cada distrito e lista os 10 distritos com o maior valor total.", 
+                            colunas=['Distrito', 'TotalContratos', 'ValorTotalContratado'], 
+                            resultados=resultados)
+@APP.route('/queries/query_12')
+def query_12():
+    """Q12: preço médio de contrato para cada tipo de procedimento, útil para identificar quais procedimentos tendem a ser mais caros"""
+    resultados = db.execute('''
+        SELECT
+    TP.TIPO_PROCEDIMENTO,
+    COUNT(C.IDCONTRATO) AS TotalContratos,
+    ROUND(AVG(C.PRECOCONTRATUAL), 2) AS PrecoMedioContrato
+FROM
+    CONTRATOS C
+JOIN
+    TIPO_PROCEDIMENTO TP ON C.tipoprocedimento = TP.ID_TIPO_PROCEDIMENTO
+GROUP BY
+    TP.TIPO_PROCEDIMENTO
+HAVING
+    COUNT(C.IDCONTRATO) >= 50 -- Apenas tipos com pelo menos 50 contratos
+ORDER BY
+    PrecoMedioContrato DESC;
+    ''')
+    return render_template('resultado_tabela.html', 
+                            titulo="Query 12: preço médio de contrato para cada tipo de procedimento, útil para identificar quais procedimentos tendem a ser mais caros", 
+                            colunas=['TIPO_PROCEDIMENTO', 'TotalContratos', 'PrecoMedioContrato'], 
                             resultados=resultados)

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Lista Completa de Consultas{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <a href="/">Início</a> &gt; Consultas
+</div>
+{% endblock %}
+
+{% block content %}
+    <h2 class="dashboard-title">Lista de Consultas (Queries) </h2>
+    
+    <p style="margin-bottom: 35px; color: var(--text-medium);">
+        Selecione uma das consultas abaixo para executar o relatório e ver os resultados detalhados.
+    </p>
+
+    <!-- Lista que corresponde às 10 queries implementadas no app.py -->
+    <ul>
+        <li><a href="/queries/query_1">Query 1: Contagem e Valor Total/Médio dos Contratos</a></li>
+        <li><a href="/queries/query_2">Query 2: Contrato com o Valor Máximo</a></li>
+        <li><a href="/queries/query_3">Query 3: Contagem de Contratos por Distrito</a></li>
+        <li><a href="/queries/query_4">Query 4: Top 5 Tipos de Contrato</a></li>
+        <li><a href="/queries/query_5">Query 5: Contagem por Tipo de Procedimento</a></li>
+        <li><a href="/queries/query_6">Query 6: Top 10 Códigos CPV (Descrição)</a></li>
+        <li><a href="/queries/query_7">Query 7: Prazo Médio de Execução por Tipo de Contrato (Dias)</a></li>
+        <li><a href="/queries/query_8">Query 8: Top 10 Adjudicantes por Valor</a></li>
+        <li><a href="/queries/query_9">Query 9: Pesquisa por Objeto (Requer Parâmetro 'termo')</a></li>
+        <li><a href="/queries/query_10">Query 10: Entidades Registadas sem NIF</a></li>
+        <li><a href="/queries/query_11">Query 11: valor total de todos os contratos em cada distrito e lista os 10 distritos com o maior valor total</a></li>
+        <li><a href="/queries/query_12">Query 12: preço médio de contrato para cada tipo de procedimento, útil para identificar quais procedimentos tendem a ser mais caros</a></li>
+    </ul>
+    
+    <p style="margin-top: 35px; color: var(--text-medium); opacity: 0.8;">
+    </p>
+    
+{% endblock %}

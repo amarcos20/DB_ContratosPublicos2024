@@ -3,22 +3,69 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard de Contratos - {% block title %}{% endblock %}</title>
+    <title>{% block title %}Dashboard{% endblock %} - Análise de Contratos</title>
     
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     
+    <style>
+        /* Estilos adicionais para navegação */
+        nav {
+            background-color: var(--brown-medium);
+            padding: 15px 40px;
+            box-shadow: 0 2px 4px var(--shadow);
+        }
+        
+        nav a {
+            color: var(--white);
+            margin-right: 25px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--cream);
+            text-decoration: none;
+        }
+        
+        .breadcrumb {
+            background-color: var(--cream);
+            padding: 12px 40px;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+        
+        .breadcrumb a {
+            color: var(--brown-medium);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Análise de Contratos - Interface SQLite</h1>
+        <h1> Sistema de Análise de Contratos Públicos</h1>
     </header>
-    <hr>
+    
+    <nav>
+        <a href="/"> Início</a>
+        <a href="consultas"> Consultas</a>
+        <a href="t"> Tabelas</a>
+
+    </nav>
+    
+    {% block breadcrumb %}{% endblock %}
+    
     <main>
         {% block content %}{% endblock %}
     </main>
+    
     <footer>
-        <hr>
-        <p>&copy; 2025 Flask Dashboard</p>
+        <p>Sistema Análise de Contratos Públicos</p>
+        <p style="font-size: 0.85rem; margin-top: 10px; opacity: 0.8;">&copy; 2025 Dashboard Flask | Base de Dados SQLite</p>
     </footer>
 </body>
 </html>

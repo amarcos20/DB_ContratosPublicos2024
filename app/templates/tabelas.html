@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Estrutura da Base de Dados{% endblock %}
+
+{% block content %}
+    <h2 class="dashboard-title">Estrutura da Base de Dados </h2>
+    
+    <p style="margin-bottom: 25px; color: var(--text-medium);">
+        Selecione uma tabela para ver a sua estrutura completa e um exemplo das 5 primeiras linhas.
+    </p>
+
+    <ul>
+        {% for table in tables %}
+        <li>
+            <a href="/t/{{ table.name | lower }}">{{ table.name }}</a>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 5px;">
+                PK: {{ table.fields | join(', ') }}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <hr>
+    
+     <h2 class="dashboard-title">Diagrama do Modelo Relacional</h2>
+    <p>
+        O diagrama não pode ser incorporado diretamente nesta página devido a restrições de segurança do servidor do GitHub. Por favor, utilize o botão abaixo para abrir o diagrama em formato PDF numa nova janela.
+    </p>
+    
+    <!-- BLOCO CORRIGIDO: Substituído iframe por link/botão direto -->
+    <div style="margin: 30px 0; padding: 25px; background-color: var(--white); border-radius: 8px; box-shadow: 0 4px 8px var(--shadow); text-align: center;">
+        
+        <a 
+            href="https://github.com/amarcos20/DB_ContratosPublicos2024/blob/main/MODELORELACIONAL/RELACIONAL.pdf" 
+            target="_blank" 
+            class="back-link" 
+            style="display: inline-block; padding: 12px 30px; font-size: 1.1rem; text-decoration: none;"
+        >
+            Abrir Diagrama Relacional (PDF)
+        </a>
+        
+        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: var(--text-medium);">
+            Modelo de Entidade-Relacionamento (ER) da Base de Dados.
+        </p>
+    </div>
+
+    
+{% endblock %}
