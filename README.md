@@ -28,8 +28,9 @@ conda activate sql
 # 3. Instalar as dependências (incluindo pandas, sqlite3, e frameworks da app)
 pip install -r requirements.txt
 ```
-# Rodar o ficheiro Jupyter Notebook **DATABASE_MODELING**
-# Este passo executa a limpeza, modelação e criação da DB.
+#### 2. Rodar o ficheiro Jupyter Notebook **DATABASE_MODELING**
+ Este passo executa a limpeza, modelação e criação da DB.
+#### 3. Ligar o server.py
 ```bash
 # Rodar a aplicação (assumindo que 'server.py' contém a lógica do Flask/Streamlit/Django)
 python server.py
