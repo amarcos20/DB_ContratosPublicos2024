@@ -43,6 +43,7 @@ python server.py
 Este projeto foi desenvolvido por:
 
 ---
+```
 
 ## 👥 Equipa / Créditos
 
