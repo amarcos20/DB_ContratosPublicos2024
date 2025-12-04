@@ -61,7 +61,7 @@ TABLE_SCHEMA = {
             {'name': 'DESCRACORDOQUADRO', 'type': 'text', 'note': 'Opcional (?)'}
         ]
     },
-    'LOCAL_EXECUCAO': {
+    'LOCAL': {
         'fields': [
             {'name': 'ID_LOCAL', 'type': 'int', 'note': 'PK'}, 
             {'name': 'PAIS', 'type': 'varchar', 'note': ''}, 
