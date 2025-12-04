@@ -5,7 +5,7 @@
 ### Deliverables
 
 1.  *ETL Script (DataBase_Modeling.ipynb):* O script principal (Notebook Jupyter) contendo toda a lógica de transformação, validação e geração de IDs, culminando na criação da base de dados final.
-2.  *Cleaned Dimensional Files (.csv):* Tabelas de pesquisa padronizadas, desduplicadas e indexadas por ID (e.g., `entities.csv`, `cpv_codes.csv`, `local_execution.csv`).
+2.  *Cleaned Dimensional Files (.csv):* Tabelas de pesquisa padronizadas, desduplicadas e indexadas por ID (e.g., `entidades.csv`, `cpv.csv`, `localExecucao.csv`).
 3.  *Final Database (.db):* O ficheiro da base de dados relacional (`ContratosPublicos2024.db` ou similar) pronto para ser consumido pela aplicação.
 
 ---
