@@ -26,7 +26,7 @@ conda create --name sql python=3.12
 conda activate sql
 
 # 3. Instalar as dependências (incluindo pandas, sqlite3, e frameworks da app)
-conda install -r requirements.txt
+pip install -r requirements.txt
 
 # Rodar o ficheiro Jupyter Notebook
 # Este passo executa a limpeza, modelação e criação da DB.
