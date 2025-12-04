@@ -34,7 +34,6 @@ pip install -r requirements.txt
 ```bash
 # Rodar a aplicação (assumindo que 'server.py' contém a lógica do Flask/Streamlit/Django)
 python server.py
----
 ```
 
 ---
