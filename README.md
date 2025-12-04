@@ -30,7 +30,7 @@ conda install -r requirements.txt
 
 # Rodar o ficheiro Jupyter Notebook
 # Este passo executa a limpeza, modelação e criação da DB.
-jupyter notebook DataBase_Modeling.ipynb
+jupyter notebook tabelas2/DataBase_Modeling.ipynb
 # OU (Se usar a CLI do ipynb)
 # python -m ipykernel run DataBase_Modeling.ipynb
 
