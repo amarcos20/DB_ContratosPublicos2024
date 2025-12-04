@@ -43,7 +43,7 @@ python server.py
 Este projeto foi desenvolvido por:
 
 | Membro | Curso e numero mecanografico |Perfil do LinkedIn |
-| :--- | :--- | :--- |
+| :---   | :---                         | :---              |
 | **Afonso Marcos ** | Bioinformatica FCUP / 202404088 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afonsomarcos20/) |
 | **Pedro Afonso** | Bioinfomatica FCUP / 202404125 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-afonso-282a43294/) |
 | **Artur Anselmo** | Bioinformatica FCUP / 202403965 |  |
