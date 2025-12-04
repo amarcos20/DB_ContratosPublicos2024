@@ -49,7 +49,6 @@ Este projeto foi desenvolvido por:
 | **Artur Anselmo** | Bioinformática FCUP / 202403965 | (Link indisponível) |
 | **Marcos Torres** | Bioinformática FCUP / 202409299 | (Link indisponível) |
 
----*Marcos Torres** | Bioinformática FCUP / 202409299 | (Link indisponível) |
 
 ---
 ---
