@@ -50,7 +50,7 @@ Este projeto foi desenvolvido por:
 
 | Membro | Curso e Número Mecanográfico | Perfil do LinkedIn |
 | :--- | :--- | :--- |
-| **Afonso Marcos** | Bioinformática FCUP / 202404088 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afonsomarcos20/) |
+| **Afonso Marcos** | Bioinformática FCUP / 202404088 | [Perfil LinkedIn](https://www.linkedin.com/in/afonsomarcos20/) |
 | **Pedro Afonso** | Bioinformática FCUP / 202404125 | [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pedro-afonso-282a43294/) |
 | **Artur Anselmo** | Bioinformática FCUP / 202403965 | (Link indisponível) |
 | **Marcos Torres** | Bioinformática FCUP / 202409299 | (Link indisponível) |
