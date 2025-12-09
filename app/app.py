@@ -7,36 +7,37 @@ import db # Importa as funções execute/fetchone do db.py
 
 TABLE_SCHEMA = {
     'CONTRATOS': {
-        'fields': [
-            {'name': 'ID_CONTRATO', 'type': 'int', 'note': 'PK'},
-            {'name': 'DATACELEBRACAOCONTRATO', 'type': 'date', 'note': ''},
-            {'name': 'DATAPUBLICACAOCONTRATO', 'type': 'date', 'note': ''},
-            {'name': 'PRAZOEXECUCAO', 'type': 'varchar', 'note': ''},
-            {'name': 'PRECOCONTRATUAL', 'type': 'float', 'note': ''},
-            {'name': 'OBJECTOCONTRATO', 'type': 'text', 'note': ''},
-            {'name': 'PROCEDIMENTOCENTRALIZADO', 'type': 'boolean', 'note': 'Opcional (?)'},
-            {'name': 'ID_TIPO_CONTRATO', 'type': 'int', 'note': 'FK'},
-            {'name': 'ID_FUNDAMENTO', 'type': 'int', 'note': 'FK'},
-            {'name': 'ID_TIPO_PROCEDIMENTO', 'type': 'int', 'note': 'FK'},
-            {'name': 'ID_ACORDO', 'type': 'int', 'note': 'FK'},
-            {'name': 'ID_LOCAL', 'type': 'int', 'note': 'FK'},
-            {'name': 'ID_CPV', 'type': 'int', 'note': 'FK'},
-            {'name': 'ID_ADJUDICANTE', 'type': 'int', 'note': 'FK'},
-            {'name': 'ID_ADJUDICATARIO', 'type': 'int', 'note': 'FK'},
-        ]
-    },
+    'fields': [
+        {'name': 'idcontrato', 'type': 'int', 'note': 'PK'},
+        {'name': 'tipoContrato', 'type': 'int', 'note': 'FK', 'target_table': 'TIPO_CONTRATO'}, 
+        {'name': 'tipoprocedimento', 'type': 'int', 'note': 'FK', 'target_table': 'TIPO_PROCEDIMENTO'},
+        
+        {'name': 'OBJECTOCONTRATO', 'type': 'text', 'note': ''},
+        
+        {'name': 'ADJUDICANTE', 'type': 'int', 'note': 'FK', 'target_table': 'ENTIDADES'},
+        {'name': 'ADJUDICATARIOS', 'type': 'int', 'note': 'FK', 'target_table': 'ENTIDADES'},
+        {'name': 'DATAPUBLICACAO', 'type': 'date', 'note': ''},
+        {'name': 'DATACELEBRACAOCONTRATO', 'type': 'date', 'note': ''},
+        {'name': 'PRECOCONTRATUAL', 'type': 'float', 'note': ''},
+        {'name': 'cpv', 'type': 'int', 'note': 'FK', 'target_table': 'CPV'},
+        {'name': 'PRAZOEXECUCAO', 'type': 'varchar', 'note': ''},
+        {'name': 'localExecucao', 'type': 'int', 'note': 'FK', 'target_table': 'LOCAL'},
+        {'name': 'FUNDAMENTACAO', 'type': 'int', 'note': 'FK', 'target_table': 'FUNDAMENTO'},
+        {'name': 'PROCEDIMENTOCENTRALIZADO', 'type': 'boolean', 'note': 'Opcional (?)'},
+        {'name': 'DescrAcordoQuadro', 'type': 'int', 'note': 'FK', 'target_table': 'ACORDO'}
+    ]
+},
     'ENTIDADES': {
         'fields': [
             {'name': 'ID_ENTIDADE', 'type': 'int', 'note': 'PK'},
             {'name': 'NIF', 'type': 'varchar', 'note': ''},
-            {'name': 'NOME', 'type': 'varchar', 'note': ''},
+            {'name': 'NOME', 'type': 'varchar', 'note': ''}
         ]
     },
     'TIPO_CONTRATO': {
         'fields': [
             {'name': 'ID_TIPO_CONTRATO', 'type': 'int', 'note': 'PK'}, 
-            {'name': 'TIPO_CONTRATO', 'type': 'varchar', 'note': ''}, 
-            {'name': 'TIPOCONTRATO', 'type': 'varchar', 'note': ''}
+            {'name': 'TIPO_CONTRATO', 'type': 'varchar', 'note': ''} 
         ]
     },
     'FUNDAMENTO': {
@@ -44,28 +45,25 @@ TABLE_SCHEMA = {
             {'name': 'ID_FUNDAMENTO', 'type': 'int', 'note': 'PK'}, 
             {'name': 'ARTIGO', 'type': 'varchar', 'note': ''}, 
             {'name': 'NUMERO', 'type': 'int', 'note': 'Opcional (?)'}, 
-            {'name': 'DETALHEFUNDAMENTACAO', 'type': 'text', 'note': 'Opcional (?)'},
-            {'name': 'ALINEA', 'type': 'varchar', 'note': 'Opcional (?)'},
+            {'name': 'ALINEA', 'type': 'varchar', 'note': 'Opcional (?)'}
         ]
     },
     'TIPO_PROCEDIMENTO': {
         'fields': [
             {'name': 'ID_TIPO_PROCEDIMENTO', 'type': 'int', 'note': 'PK'}, 
-            {'name': 'PROCEDIMENTO', 'type': 'varchar', 'note': ''}, 
-            {'name': 'TIPOPROCEDIMENTO', 'type': 'varchar', 'note': ''}
+            {'name': 'TIPO_PROCEDIMENTO', 'type': 'varchar', 'note': ''}
         ]
     },
     'ACORDO': {
         'fields': [
             {'name': 'ID_ACORDO', 'type': 'int', 'note': 'PK'}, 
-            {'name': 'DESCRACORDOQUADRO', 'type': 'text', 'note': 'Opcional (?)'}
+            {'name': 'DESC_ACORDO_QUADRO', 'type': 'text', 'note': 'Opcional (?)'}
         ]
     },
     'LOCAL': {
         'fields': [
             {'name': 'ID_LOCAL', 'type': 'int', 'note': 'PK'}, 
             {'name': 'PAIS', 'type': 'varchar', 'note': ''}, 
-            {'name': 'LOCALEXECUCAO', 'type': 'varchar', 'note': ''}, 
             {'name': 'DISTRITO', 'type': 'varchar', 'note': 'Opcional (?)'}, 
             {'name': 'CONCELHO', 'type': 'varchar', 'note': 'Opcional (?)'}
         ]
@@ -73,7 +71,6 @@ TABLE_SCHEMA = {
     'CPV': {
         'fields': [
             {'name': 'ID_CPV', 'type': 'int', 'note': 'PK'}, 
-            {'name': 'CPV', 'type': 'varchar', 'note': ''}, 
             {'name': 'CODIGO_CPV', 'type': 'varchar', 'note': ''}, 
             {'name': 'DESCRICAO', 'type': 'text', 'note': 'Opcional (?)'}
         ]
@@ -101,7 +98,7 @@ def get_dict_result(query, args=None):
     return dict(result_row) if result_row else None
 
 # --- ROTAS BASE E QUERIES ---
-
+ROWS_PER_PAGE = 10
 @APP.route('/t')
 def tabelas():
     """Rota de índice das tabelas."""
@@ -115,48 +112,176 @@ def tabelas():
 
 @APP.route('/t/<table_name>')
 def table_detail(table_name):
-    """Rota de detalhe de uma tabela específica com as 5 primeiras linhas."""
+    """
+    Rota de detalhe de uma tabela específica com paginação. 
+    Mostra APENAS a(s) coluna(s) Primary Key (PK) para navegação.
+    """
     upper_name = table_name.upper()
     
     # 1. Obter a estrutura da tabela
     schema = TABLE_SCHEMA.get(upper_name)
     if not schema:
-        return render_template('tabela_detalhe.html', table_name=upper_name, columns=[], data=[], fields=[])
+        return render_template('tabela_detalhe.html', table_name=upper_name,page=1,      
+                               total_rows=0,   # Variável 'total_rows' é agora definida
+                               total_pages=1, columns=[], data=[], fields=[])
 
-    # 2. Obter as 5 primeiras linhas da base de dados
-    columns = []
-    data = []
-    
+    # 2. Obter o número da página (default para 1)
     try:
-        # ❗ QUERY SQL SIMPLES SEM MOCK DATA
-        query = f'SELECT * FROM {upper_name} LIMIT 5'
-        rows = db.execute(query) # Assume db.execute devolve uma lista de sqlite3.Row ou tuplos
+        page = int(request.args.get('page', 1))
+    except ValueError:
+        page = 1 
+    
+    offset = (page - 1) * ROWS_PER_PAGE
+
+    # 3. Identificar a(s) Primary Key(s) (PK) para a exibição e o link de detalhe
+    # ❗ ALTERAÇÃO AQUI: Apenas as PKs serão usadas para exibição.
+    pk_fields = [f['name'] for f in schema['fields'] if f.get('note') == 'PK']
+    
+    # Se não houver PK definida, usamos a primeira coluna do schema como fallback
+    if not pk_fields and schema['fields']:
+        pk_fields = [schema['fields'][0]['name']]
+        
+    display_fields = pk_fields # AGORA: display_fields é igual a pk_fields
+    columns_query = ', '.join(display_fields) if display_fields else '*'
+    
+    data = []
+    total_rows = 0 
+
+    try:
+        # ❗ QUERY SQL SIMPLES PARA OBTER CONTAGEM TOTAL
+        count_query = f'SELECT COUNT(*) FROM {upper_name}'
+        total_rows = db.execute(count_query)[0][0]
+        
+        # ❗ QUERY SQL SIMPLES COM PAGINAÇÃO - Seleciona apenas as colunas PK
+        query = f'SELECT {columns_query} FROM {upper_name} LIMIT {ROWS_PER_PAGE} OFFSET {offset}'
+        rows = db.execute(query) 
         
         if rows:
-            # Assume que a primeira linha (se não for sqlite3.Row) tem atributos de keys para colunas
-            # Se db.execute devolve sqlite3.Row, pode-se usar rows[0].keys()
-            # Se db.execute devolve tuplos, deve usar os nomes do schema ou ajustar db.execute
+            # As colunas são as colunas PK que definimos
+            columns = display_fields
+            data = [list(row) for row in rows] 
             
-            # Tentativa de obter colunas (Ajuste se o seu db.execute for diferente)
-            try:
-                # Se db.execute devolve sqlite3.Row (dicionário-like)
-                columns = list(rows[0].keys())
-            except AttributeError:
-                # Se db.execute devolve apenas tuplos, usamos as colunas do SCHEMA
-                columns = [f['name'] for f in schema['fields']]
-
-            data = [list(row) for row in rows] # Converte para lista de listas para o Jinja
+        else:
+            columns = display_fields
 
     except Exception as e:
-        logging.error(f"Erro inesperado ao consultar a tabela {upper_name}: {e}")
-        pass
+        logging.error(f"Erro inesperado ao consultar a tabela {upper_name} com paginação: {e}")
+        columns = display_fields # Usa o schema como fallback para colunas
 
+    # Calcular o total de páginas e links de navegação
+    total_pages = (total_rows + ROWS_PER_PAGE - 1) // ROWS_PER_PAGE
+    prev_page = page - 1 if page > 1 else None
+    next_page = page + 1 if page < total_pages else None
+    
+    # Renderiza o template
     return render_template('tabela_detalhe.html', 
                            table_name=upper_name, 
                            columns=columns, 
                            data=data, 
-                           fields=schema['fields'])
+                           fields=schema['fields'],
+                           page=page,
+                           total_pages=total_pages,
+                           total_rows=total_rows,
+                           prev_page=prev_page,
+                           next_page=next_page,
+                           pk_fields=pk_fields)
 
+def row_to_dict(row, column_names):
+    """Converte a linha da base de dados num dicionário."""
+    
+    if hasattr(row, 'keys'):
+        return dict(row)
+        
+    if len(row) == len(column_names):
+        return dict(zip(column_names, row))
+    return None
+
+# LEMBRE-SE de manter a função row_to_dict e a normalização de chaves em minúsculas
+# que resolveu o problema anterior.
+
+@APP.route('/t/<table_name>/<primary_key_value>')
+def row_detail(table_name, primary_key_value):
+    """
+    Rota de detalhe de uma linha específica, que enriquece os dados 
+    com links para Foreign Keys e garante o mapeamento correto dos atributos.
+    """
+    upper_name = table_name.upper()
+    
+    # 1. Obter a estrutura da tabela
+    schema = TABLE_SCHEMA.get(upper_name)
+    if not schema:
+        # Se a tabela não for encontrada, retorna sem dados
+        return render_template('linha_detalhe.html', table_name=upper_name, primary_key_value=primary_key_value, attributes=[], pk_name=None)
+
+    # 2. Identificar PK e obter a lista de nomes de colunas
+    pk_fields = [f['name'] for f in schema['fields'] if f.get('note') == 'PK']
+    pk_name = pk_fields[0] if pk_fields else None
+    all_column_names = [f['name'] for f in schema['fields']]
+    
+    row_data = None
+    
+    if pk_name:
+        try:
+            # Seleção explícita para garantir a ordem (e forçar a seleção apenas se PK existir)
+            columns_select = ', '.join(all_column_names)
+            query = f'SELECT {columns_select} FROM {upper_name} WHERE {pk_name} = ?'
+            rows = db.execute(query, [primary_key_value]) 
+            
+            if rows:
+                row_tuple = rows[0]
+                
+                # Mapeamento do resultado da DB (sqlite3.Row ou tuplo) para dicionário Python.
+                if hasattr(row_tuple, 'keys'):
+                    # Resultado é dicionário-like (sqlite3.Row)
+                    row_data_temp = dict(row_tuple)
+                elif len(row_tuple) == len(all_column_names):
+                    # Resultado é tuplo (usa row_to_dict)
+                    row_data_temp = row_to_dict(row_tuple, all_column_names)
+                else:
+                    logging.error(f"Erro de alinhamento: Tabela {upper_name} - Colunas DB ({len(row_tuple)}) não corresponde ao Schema ({len(all_column_names)}).")
+                    row_data_temp = None
+                
+                # ❗ NORMALIZAÇÃO: Converter TODAS as chaves para minúsculas
+                if row_data_temp:
+                    row_data = {k.lower(): v for k, v in row_data_temp.items()}
+            
+        except Exception as e:
+            logging.error(f"Erro inesperado ao consultar a linha {primary_key_value} da tabela {upper_name}: {e}")
+            pass
+
+    # 3. ENRIQUECER OS DADOS COM LINKS (FKs)
+    final_attributes = []
+    if row_data:
+        for field in schema['fields']:
+            field_name_lower = field['name'].lower()
+            
+            # Obter o valor (usando a chave em minúsculas)
+            value = row_data.get(field_name_lower)
+            
+            link_url = None
+            
+            # VERIFICAÇÃO FK: Apenas se for uma FK, o valor não for NULO, e o target_table existir
+            if field.get('note') == 'FK' and value is not None:
+                target_table = field.get('target_table') # Ex: 'FUNDAMENTO'
+                logging.warning(f"FK CHECK - Campo: {field['name']}, Valor: {value}, Tabela Destino: {target_table}")
+                if target_table:
+                    # Construir o URL: /t/<nome_tabela_destino>/<valor_pk_destino>
+                    link_url = f"/t/{target_table.lower()}/{str(value)}" 
+
+            # Adicionar o atributo enriquecido à lista final
+            final_attributes.append({
+                'name': field['name'],  # Nome original para exibição
+                'value': value,
+                'note': field.get('note'),
+                'link_url': link_url
+            })
+
+    # 4. Renderizar o template com a lista de 'attributes'
+    return render_template('linha_detalhe.html', 
+                           table_name=upper_name, 
+                           primary_key_value=primary_key_value, 
+                           attributes=final_attributes, 
+                           pk_name=pk_name)
 @APP.route('/consultas')
 @APP.route('/queries')
 def lista_consultas():
@@ -284,15 +409,9 @@ def query_7():
     """Q7: Duração Média (prazoExecucao) por Tipo de Contrato"""
     resultados = db.execute('''
         SELECT 
-<<<<<<< HEAD
-            TT.TIPO_CONTRATO, 
-            ROUND(AVG(CAST(C.prazoExecucao AS REAL)), 2) AS PrazoMedioDias,                            
-            COUNT(C.idcontrato) AS NumContratosValidos                     -- ❗ Adicionado Contagem
-=======
             TT.TIPO_CONTRATO,
             ROUND(AVG(CAST(C.prazoExecucao AS REAL)), 2) AS PrazoMedioDias,
             COUNT(C.idcontrato) AS NumContratosValidos                    
->>>>>>> d333bfa2cd3ccf771a0156bee26872c9195a8ce2
         FROM CONTRATOS C
         JOIN TIPO_CONTRATO TT ON C.tipocontrato = TT.ID_TIPO_CONTRATO
         WHERE C.prazoExecucao IS NOT NULL AND C.prazoExecucao > 0
@@ -301,11 +420,7 @@ def query_7():
     ''')
     return render_template('resultado_tabela.html', 
                             titulo="Query 7: Prazo Médio de Execução por Tipo de Contrato (Dias)", 
-<<<<<<< HEAD
-                            colunas=['Tipo Contrato', 'Prazo Médio (dias)', 'NumContratosValidos'], 
-=======
                             colunas=['Tipo Contrato', 'Prazo Médio (dias)','NumContratosValidos'], 
->>>>>>> d333bfa2cd3ccf771a0156bee26872c9195a8ce2
                             resultados=resultados)
 
 # --- 3. Queries de Entidades e Detalhes (Q11 a Q15) ---
@@ -565,7 +680,3 @@ def exibir_codigo_sql(query_id):
             title=title,
             sql_code=sql_code
         )
-<<<<<<< HEAD
-    
-=======
->>>>>>> d333bfa2cd3ccf771a0156bee26872c9195a8ce2

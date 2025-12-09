@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
-{% block title %}Tabela {{ table_name }}{% endblock %}
+{% block title %}Tabela {{ table_name }} (Página {{ page }}){% endblock %}
 
 {% block breadcrumb %}
 <div class="breadcrumb">
-    <a href="/">Início</a> &gt; <a href="/t">Tabelas</a> &gt; {{ table_name }}
+    <a href="/">Início</a> &gt; <a href="/t" >Tabelas</a> &gt; {{ table_name }}
 </div>
 {% endblock %}
 
@@ -12,18 +12,19 @@
     <h2>Tabela: {{ table_name }}</h2>
 
     <p style="margin-bottom: 25px; color: var(--text-medium);">
-        Abaixo, a estrutura de campos e um exemplo das **5 primeiras linhas** da tabela **{{ table_name }}**.
+        Listagem com **{{ total_rows }}** linhas no total. A mostrar linhas de {{ (page - 1) * 10 + 1 }} a {{ (page - 1) * 10 + data|length }}.
     </p>
 
     {% if columns and data %}
         
-        <h3>Dados (Amostra - Top 5)</h3>
+        <h3>Dados (Amostra - 10 por página)</h3>
         <table>
             <thead>
                 <tr>
                     {% for col in columns %}
                     <th>{{ col }}</th>
                     {% endfor %}
+                    <th>Detalhe</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,10 +33,32 @@
                     {% for cell in row %}
                     <td>{{ cell }}</td>
                     {% endfor %}
+                    
+                    {% set pk_value = row[0] if row else 'N/A' %}
+                    
+                    <td>
+                        <a href="/t/{{ table_name | lower }}/{{ pk_value }}">Ver Linha</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        
+        <div class="pagination" style="margin-top: 20px; text-align: center;">
+            {% if prev_page %}
+                <a href="/t/{{ table_name | lower }}?page={{ prev_page }}" style="margin-right: 15px;">← Anterior</a>
+            {% else %}
+                <span style="opacity: 0.5; margin-right: 15px;">← Anterior</span>
+            {% endif %}
+
+            <span style="font-weight: bold;">Página {{ page }} de {{ total_pages }}</span>
+
+            {% if next_page %}
+                <a href="/t/{{ table_name | lower }}?page={{ next_page }}" style="margin-left: 15px;">Próximo →</a>
+            {% else %}
+                <span style="opacity: 0.5; margin-right: 15px;">Próximo →</span>
+            {% endif %}
+        </div>
         
         <hr>
 
@@ -50,7 +73,7 @@
         </ul>
         
     {% else %}
-        <p>Não foi possível carregar dados para a tabela {{ table_name }} ou a tabela está vazia.</p>
+        <p>A tabela {{ table_name }} está vazia ou ocorreu um erro ao carregar os dados.</p>
     {% endif %}
 
     <a href="/t" class="back-link">← Voltar à Lista de Tabelas</a>

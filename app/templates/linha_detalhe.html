@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Detalhe da Linha{% endblock %}
+
+{% block breadcrumb %}
+<div class="breadcrumb">
+    <a href="/">Início</a> &gt; <a href="/t">Tabelas</a> &gt; <a href="/t">Linhas ({{ table_name }})</a> &gt; Detalhe
+</div>
+{% endblock %}
+
+{% block content %}
+<style>
+    /* Estilos básicos para o detalhe da linha */
+    .detail-container {
+        padding: 20px;
+        background-color: var(--grey-light);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .detail-table {
+        width: 100%;
+        max-width: 600px;
+        border-collapse: collapse;
+        margin-top: 15px;
+    }
+    .detail-table tr:nth-child(even) {
+        background-color: var(--grey-medium);
+    }
+    .detail-table td {
+        padding: 10px;
+        border: 1px solid var(--grey-dark);
+        vertical-align: top;
+    }
+    .attribute-name {
+        font-weight: bold;
+        width: 35%;
+        color: var(--brown-dark);
+    }
+    .attribute-note {
+        font-size: 0.8rem; 
+        color: var(--brown-medium);
+    }
+    /* Estilo para links de Foreign Key */
+    .link-fk {
+        font-weight: bold; 
+        color: var(--blue-link, #007bff); 
+        text-decoration: none;
+        border-bottom: 1px dashed var(--blue-link, #007bff);
+        padding-bottom: 1px;
+    }
+    .link-fk:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="detail-container">
+    <h2>Detalhe da Linha (Tabela: {{ table_name }})</h2>
+    
+    {% if attributes %} 
+        <p>Valores Chave: <strong>{{ pk_name }}: {{ primary_key_value }}</strong></p>
+        
+        <table class="detail-table">
+            <tbody>
+                {% for attr in attributes %}
+                <tr>
+                    <td class="attribute-name">
+                        {{ attr.name }}
+                        {% if attr.note %}
+                            <br><span class="attribute-note">({{ attr.note }})</span>
+                        {% endif %}
+                    </td>
+                    
+                    <td>
+                        {% if attr.link_url %}
+                            <a href="{{ attr.link_url }}" class="link-fk">
+                                {{ attr.value if attr.value is not none else 'NULO' }}
+                            </a>
+                        {% else %}
+                            {{ attr.value if attr.value is not none else 'NULO' }}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Não foi possível encontrar o detalhe para a linha com a chave <strong>{{ primary_key_value }}</strong> na tabela <strong>{{ table_name }}</strong>.</p>
+        <p>Verifique se o valor da chave está correto ou se a base de dados tem essa linha.</p>
+    {% endif %}
+
+    <p style="margin-top: 20px;">
+        <a href="/t/Contratos" class="link-button">← Voltar aos Contratos</a>
+        <a href="/t/{{ table_name }}" class="link-button">← Voltar à Tabela</a>
+    </p>
+</div>
+
+{% endblock %}
