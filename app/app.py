@@ -284,8 +284,9 @@ def query_7():
     """Q7: Duração Média (prazoExecucao) por Tipo de Contrato"""
     resultados = db.execute('''
         SELECT 
-            TT.TIPO_CONTRATO, 
-            COUNT(C.idcontrato) AS NumContratosValidos                     -- ❗ Adicionado Contagem
+            TT.TIPO_CONTRATO,
+            ROUND(AVG(CAST(C.prazoExecucao AS REAL)), 2) AS PrazoMedioDias,
+            COUNT(C.idcontrato) AS NumContratosValidos                    
         FROM CONTRATOS C
         JOIN TIPO_CONTRATO TT ON C.tipocontrato = TT.ID_TIPO_CONTRATO
         WHERE C.prazoExecucao IS NOT NULL AND C.prazoExecucao > 0
