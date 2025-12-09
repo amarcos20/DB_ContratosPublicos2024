@@ -61,7 +61,7 @@ TABLE_SCHEMA = {
             {'name': 'DESCRACORDOQUADRO', 'type': 'text', 'note': 'Opcional (?)'}
         ]
     },
-    'LOCAL_EXECUCAO': {
+    'LOCAL': {
         'fields': [
             {'name': 'ID_LOCAL', 'type': 'int', 'note': 'PK'}, 
             {'name': 'PAIS', 'type': 'varchar', 'note': ''}, 
@@ -284,9 +284,15 @@ def query_7():
     """Q7: Duração Média (prazoExecucao) por Tipo de Contrato"""
     resultados = db.execute('''
         SELECT 
+<<<<<<< HEAD
             TT.TIPO_CONTRATO, 
             ROUND(AVG(CAST(C.prazoExecucao AS REAL)), 2) AS PrazoMedioDias,                            
             COUNT(C.idcontrato) AS NumContratosValidos                     -- ❗ Adicionado Contagem
+=======
+            TT.TIPO_CONTRATO,
+            ROUND(AVG(CAST(C.prazoExecucao AS REAL)), 2) AS PrazoMedioDias,
+            COUNT(C.idcontrato) AS NumContratosValidos                    
+>>>>>>> d333bfa2cd3ccf771a0156bee26872c9195a8ce2
         FROM CONTRATOS C
         JOIN TIPO_CONTRATO TT ON C.tipocontrato = TT.ID_TIPO_CONTRATO
         WHERE C.prazoExecucao IS NOT NULL AND C.prazoExecucao > 0
@@ -295,7 +301,11 @@ def query_7():
     ''')
     return render_template('resultado_tabela.html', 
                             titulo="Query 7: Prazo Médio de Execução por Tipo de Contrato (Dias)", 
+<<<<<<< HEAD
                             colunas=['Tipo Contrato', 'Prazo Médio (dias)', 'NumContratosValidos'], 
+=======
+                            colunas=['Tipo Contrato', 'Prazo Médio (dias)','NumContratosValidos'], 
+>>>>>>> d333bfa2cd3ccf771a0156bee26872c9195a8ce2
                             resultados=resultados)
 
 # --- 3. Queries de Entidades e Detalhes (Q11 a Q15) ---
@@ -555,4 +565,7 @@ def exibir_codigo_sql(query_id):
             title=title,
             sql_code=sql_code
         )
+<<<<<<< HEAD
     
+=======
+>>>>>>> d333bfa2cd3ccf771a0156bee26872c9195a8ce2
