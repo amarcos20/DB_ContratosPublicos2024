@@ -39,7 +39,7 @@ TABLE_SCHEMA = {
             {'name': 'TIPOCONTRATO', 'type': 'varchar', 'note': ''}
         ]
     },
-    'FUNDAMENTACAO': {
+    'FUNDAMENTO': {
         'fields': [
             {'name': 'ID_FUNDAMENTO', 'type': 'int', 'note': 'PK'}, 
             {'name': 'ARTIGO', 'type': 'varchar', 'note': ''}, 
