@@ -39,7 +39,7 @@ TABLE_SCHEMA = {
             {'name': 'TIPOCONTRATO', 'type': 'varchar', 'note': ''}
         ]
     },
-    'FUNDAMENTACAO': {
+    'FUNDAMENTO': {
         'fields': [
             {'name': 'ID_FUNDAMENTO', 'type': 'int', 'note': 'PK'}, 
             {'name': 'ARTIGO', 'type': 'varchar', 'note': ''}, 
@@ -285,6 +285,7 @@ def query_7():
     resultados = db.execute('''
         SELECT 
             TT.TIPO_CONTRATO, 
+            ROUND(AVG(CAST(C.prazoExecucao AS REAL)), 2) AS PrazoMedioDias,                            
             COUNT(C.idcontrato) AS NumContratosValidos                     -- ❗ Adicionado Contagem
         FROM CONTRATOS C
         JOIN TIPO_CONTRATO TT ON C.tipocontrato = TT.ID_TIPO_CONTRATO
@@ -294,7 +295,7 @@ def query_7():
     ''')
     return render_template('resultado_tabela.html', 
                             titulo="Query 7: Prazo Médio de Execução por Tipo de Contrato (Dias)", 
-                            colunas=['Tipo Contrato', 'Prazo Médio (dias)'], 
+                            colunas=['Tipo Contrato', 'Prazo Médio (dias)', 'NumContratosValidos'], 
                             resultados=resultados)
 
 # --- 3. Queries de Entidades e Detalhes (Q11 a Q15) ---
@@ -352,7 +353,7 @@ def query_10():
     ''')
     return render_template('resultado_tabela.html', 
                             titulo="Query 10: Entidades Registadas sem NIF", 
-                            colunas=['ID Entidade', 'Nome', 'NIF'], 
+                            colunas=['ID Entidade', 'Nome'], 
                             resultados=resultados)
 @APP.route('/queries/query_11')
 def query_11():
@@ -554,3 +555,4 @@ def exibir_codigo_sql(query_id):
             title=title,
             sql_code=sql_code
         )
+    
